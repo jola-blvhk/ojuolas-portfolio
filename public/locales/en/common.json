@@ -1,0 +1,47 @@
+{
+  "welcome": "Hi, I’m Ojuola 🧚🏾‍♀️",
+  "about": "I'm a UX/UI Designer with **4 years of Technical Support experience**, blending problem-solving and user-focused design. Outside of Design, I enjoy cooking, working out, and making 3D seal characters 🦭.",
+  "tabs.projects": "Projects",
+  "tabs.3d": "3D World",
+  "tabs.about": "About me",
+  "tabs.resume": "Resume",
+  "tabs.linkedin": "Linkedin",
+  "tabs.behance": "Behance",
+  "projects": [
+    {
+      "title": "Ark Software",
+      "description": "Reimagining architecture software with a modern UI, AI and real‑time collaboration.",
+      "image": "/images/projects/ark.webp"
+    },
+    {
+      "title": "PIKD",
+      "description": "Pikd  engages users to win items like **collectibles on their AR screen.** Users earn points for collecting items, inviting friends, etc.",
+      "image": "/images/projects/pikd.webp"
+    },
+    {
+      "title": "Hardsands CRM",
+      "description": "Providing tailored solutions to enhance communication, streamline processes, and drive growth. **Turning leads to contacts** made easy.",
+      "image": "/images/projects/hardsands.webp"
+    },
+    {
+      "title": "X App Optimization",
+      "description": "The goal is **improving user experience through optimization**, to find and fix current flaws and inefficiencies inside the twitter network.",
+      "image": "/images/projects/x.webp"
+    },
+    {
+      "title": "Interior Design Portfolio",
+      "description": "A **one stop market place** for all things furniture, accessories and more.",
+      "image": "/images/projects/interior-design.webp"
+    },
+    {
+      "title": "Portfolio Website",
+      "description": "**Personality in Design**, A functional portfolio for a front end developer with a big personality.",
+      "image": "/images/projects/portfolio-website.webp"
+    },
+    {
+      "title": "Becomy",
+      "description": "**A saas e-commerce platform**, 5 minutes to create your site 100% customizable, optimized for conversion and without commission.",
+      "image": "/images/projects/becomy.webp"
+    }
+  ]
+}
