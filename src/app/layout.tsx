@@ -19,7 +19,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Ojuolape Bello's Portfolio",
+  title: "Hi, I’m Ojuola 🧚🏾‍♀",
   description:
     "I'm a UX/UI Designer with 4 years of Technical Support experience, blending problem-solving and user-focused design. Outside of Design, I enjoy cooking, working out, and making 3D seal characters ",
 };
