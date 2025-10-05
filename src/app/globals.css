@@ -1,8 +1,8 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #000000;
   --brand-shadow: #5e5e5e;
   --brand-shadow-highlight: #000000;
   --brand-snow: #ffffff;
@@ -20,20 +20,52 @@
   --color-brand-grey: var(--brand-grey);
 }
 
-
-
 html.dark {
-  --background: #1A2428;
+  --background: #1a2428;
   --foreground: #ffffff;
- --brand-shadow: #c6c6c6;
- --brand-shadow-highlight: #ffffff;
- --brand-snow: #1A2428;
- --brand-grey: #333A3D;
- --brand-grey: #333A3D;
+  --brand-shadow: #c6c6c6;
+  --brand-shadow-highlight: #ffffff;
+  --brand-snow: #1a2428;
+  --brand-grey: #333a3d;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-poppins), Arial, Helvetica, sans-serif;
+}
+
+/* Hide scrollbar cross-browser */
+.scrollbar-none {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+/* Custom dashed border that appears only on hover (all four sides) */
+.dash-border {
+  border-style: solid; /* default solid; dashes only on hover */
+  border-image: none; /* no dashed image by default */
+}
+
+.dark .dash-border {
+  --dash-color: #6f6f6f4d;
+}
+
+/* On group hover, switch to dashed border on all four sides (simple, reliable) */
+.group:hover .dash-border {
+  border-style: dashed;
+  border-width: 2px;
+  border-color: var(--color-brand-grey);
+  border-image: repeating-linear-gradient(
+    to right,
+    var(--color-brand-grey) 0 10px,
+    transparent 10px 20px
+  ) 1;
+}
+
+.dark .group:hover .dash-border {
+  border-color: var(--dash-color, #6f6f6f4d);
 }
