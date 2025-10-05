@@ -3,24 +3,37 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --brand-shadow: #5e5e5e;
+  --brand-shadow-highlight: #000000;
+  --brand-snow: #ffffff;
+  --brand-grey: #e7e7e7;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-poppins: var(--font-poppins);
+  --font-montserrat: var(--font-montserrat);
+  --color-brand-shadow: var(--brand-shadow);
+  --color-brand-shadow-highlight: var(--brand-shadow-highlight);
+  --color-brand-snow: var(--brand-snow);
+  --color-brand-grey: var(--brand-grey);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+
+
+html.dark {
+  --background: #1A2428;
+  --foreground: #ffffff;
+ --brand-shadow: #c6c6c6;
+ --brand-shadow-highlight: #ffffff;
+ --brand-snow: #1A2428;
+ --brand-grey: #333A3D;
+ --brand-grey: #333A3D;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-poppins), Arial, Helvetica, sans-serif;
 }
