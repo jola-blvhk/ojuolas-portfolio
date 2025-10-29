@@ -11,37 +11,44 @@
     {
       "title": "Ark Software",
       "description": "Reimaginar software de arquitetura com UI moderna, IA e colaboração em tempo real.",
-      "image": "/images/projects/ark.webp"
+      "image": "/images/projects/ark.webp",
+      "slug": "ark-software"
     },
     {
       "title": "PIKD",
       "description": "O Pikd envolve os utilizadores para ganhar itens como **colecionáveis no ecrã de AR.** Os utilizadores ganham pontos por recolher itens, convidar amigos, etc.",
-      "image": "/images/projects/pikd.webp"
+      "image": "/images/projects/pikd.webp",
+      "slug": "pikd"
     },
     {
       "title": "Hardsands CRM",
       "description": "Fornecendo soluções à medida para melhorar a comunicação, simplificar processos e impulsionar o crescimento. **Transformar leads em contactos** ficou fácil.",
-      "image": "/images/projects/hardsands.webp"
+      "image": "/images/projects/hardsands.webp",
+      "slug": "hardsands-crm"
     },
     {
       "title": "Otimização do App X",
       "description": "O objetivo é **melhorar a experiência do utilizador através de otimização**, para encontrar e corrigir falhas e ineficiências atuais na rede do Twitter.",
-      "image": "/images/projects/x.webp"
+      "image": "/images/projects/x.webp",
+      "slug": "x-optimization"
     },
     {
       "title": "Portefólio de Design de Interiores",
       "description": "Um **mercado único** para tudo o que é mobiliário, acessórios e mais.",
-      "image": "/images/projects/interior-design.webp"
+      "image": "/images/projects/interior-design.webp",
+      "slug": "interior-design"
     },
     {
       "title": "Website de Portefólio",
       "description": "**Personalidade no Design**, um portefólio funcional para um desenvolvedor front‑end com grande personalidade.",
-      "image": "/images/projects/portfolio-website.webp"
+      "image": "/images/projects/portfolio-website.webp",
+      "slug": "portfolio-website"
     },
     {
       "title": "Becomy",
       "description": "**Uma plataforma SaaS de e‑commerce**, 5 minutos para criar o seu site 100% personalizável, otimizado para conversão e sem comissão.",
-      "image": "/images/projects/becomy.webp"
+      "image": "/images/projects/becomy.webp",
+      "slug": "becomy"
     }
   ]
 }

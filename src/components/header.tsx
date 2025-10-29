@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { LanguageSwitcher } from './language-switcher';
 import AnimatedThemeToggle from './theme-toggle/animated-theme-toggle';
 import { IoMail } from 'react-icons/io5';
+import { useHeaderContext } from './header-context';
 
 type HeaderProps = {
   backgroundSrc?: string;
@@ -12,17 +13,22 @@ type HeaderProps = {
 };
 
 export function Header({
-  backgroundSrc = '/images/laptop.webp',
-  avatarSrc = '/images/profile-picture.webp',
+  backgroundSrc,
+  avatarSrc,
   badgeSrc = '/vercel.svg',
   className,
 }: HeaderProps) {
+  const { backgroundSrc: contextBackground, avatarSrc: contextAvatar } = useHeaderContext();
+  
+  // Use props if provided, otherwise use context values
+  const finalBackgroundSrc = backgroundSrc || contextBackground;
+  const finalAvatarSrc = avatarSrc || contextAvatar;
   return (
     <div className={`w-full ${className ?? ''}`}>
       <div className="relative">
         <div className="relative h-[74px] w-full md:h-[109px]">
           <Image
-            src={backgroundSrc}
+            src={finalBackgroundSrc}
             alt="Header background"
             fill
             priority
@@ -33,7 +39,7 @@ export function Header({
         <div className="pointer-events-none absolute -bottom-9 flex items-center md:-bottom-20">
           <div className="border-brand-snow pointer-events-auto h-[93px] w-[93px] overflow-hidden rounded-full border-4 md:h-35 md:w-35 md:border-8">
             <Image
-              src={avatarSrc}
+              src={finalAvatarSrc}
               alt="Avatar"
               width={96}
               height={96}

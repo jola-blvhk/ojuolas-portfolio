@@ -4,6 +4,7 @@ import './globals.css';
 import { LanguageSwitcher } from '../components/language-switcher';
 import { Header } from '../components/header';
 import { ThemeProvider } from '../components/theme-provider';
+import { HeaderProvider } from '../components/header-context';
 import { headers } from 'next/headers';
 
 const poppins = Poppins({
@@ -38,8 +39,10 @@ export default async function RootLayout({
       >
         <div className="px-5 pb-10 lg:px-24 lg:pb-15">
           <ThemeProvider>
-            <Header />
-            {children}
+            <HeaderProvider>
+              <Header />
+              {children}
+            </HeaderProvider>
           </ThemeProvider>
         </div>
       </body>
