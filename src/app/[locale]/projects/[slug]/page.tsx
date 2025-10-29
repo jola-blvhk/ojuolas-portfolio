@@ -480,7 +480,7 @@ export default function ProjectPage({ params }: Params) {
            {/* Content sections - dynamically rendered based on project */}
            <div className="space-y-8 md:space-y-16">
              {project.sections[locale].map((section) => {
-               const sectionContent = project.content?.[locale]?.[section.id];
+               const sectionContent = (project as any).content?.[locale]?.[section.id];
                return (
                  <section key={section.id} id={section.id} className="scroll-mt-8 md:scroll-mt-[42px]">
                    <h2 className="mb-4 text-base md:text-2xl font-medium text-foreground">
@@ -513,7 +513,7 @@ export default function ProjectPage({ params }: Params) {
                            <div>
                              <h3 className="font-medium  text-base md:text-2xl text-foreground mb-3">Tools</h3>
                              <ul className="text-brand-shadow text-xs md:text-base space-y-1">
-                               {sectionContent.projectInfo.tools.map((tool, index) => (
+                               {sectionContent.projectInfo.tools.map((tool: string, index: number) => (
                                  <li key={index}>{tool}</li>
                                ))}
                              </ul>
@@ -535,7 +535,7 @@ export default function ProjectPage({ params }: Params) {
                            {/* Background connecting line */}
                            <div className="absolute top-4 lg:top-[33.34px] left-0 right-0 h-0.5 bg-brand-grey z-0" style={{ left: '1rem', right: '1rem' }} />
                            
-                           {sectionContent.timeline.map((item, index) => (
+                           {sectionContent.timeline.map((item: any, index: number) => (
                              <div key={index} className="flex flex-col bg-background items-center relative flex-1 z-10">
                                <div className="w-8 h-8 lg:w-[66.68px] lg:h-[66.68px] bg-transparent border-2 border-brand-grey rounded-full flex items-center justify-center mb-2">
                                  <span className="text-sm font-bold text-brand-shadow lg:text-2xl">{item.step}</span>
@@ -549,7 +549,7 @@ export default function ProjectPage({ params }: Params) {
                      {sectionContent?.analysisTables && (
                        <div className="pt-8">
                          <div className="space-y-8">
-                           {sectionContent.analysisTables.map((table, tableIndex) => (
+                           {sectionContent.analysisTables.map((table: any, tableIndex: number) => (
                              <div key={tableIndex} className="rounded-lg shadow-sm border border-gray-200 overflow-hidden w-full">
                                <div className="p-4 border-b border-gray-200 bg-gray-50">
                                  <h3 className="font-semibold text-foreground text-lg flex items-center gap-2">
@@ -562,7 +562,7 @@ export default function ProjectPage({ params }: Params) {
                                    <thead>
                                      <tr className="bg-gray-50">
                                        <th className="px-4 py-3 text-left text-xs md:text-base font-medium text-gray-700 sticky left-0 bg-gray-50 z-10 w-32">Feature</th>
-                                       {table.columns.map((column, colIndex) => (
+                                       {table.columns.map((column: string, colIndex: number) => (
                                          <th key={colIndex} className="px-4 py-3 text-center text-xs md:text-base font-medium text-gray-700">
                                            {column}
                                          </th>
@@ -570,10 +570,10 @@ export default function ProjectPage({ params }: Params) {
                                      </tr>
                                    </thead>
                                    <tbody>
-                                     {table.rows.map((row, rowIndex) => (
+                                     {table.rows.map((row: any, rowIndex: number) => (
                                        <tr key={rowIndex} className={rowIndex % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
                                          <td className="px-4 py-3 text-xs md:text-base font-medium text-gray-900 sticky left-0 bg-inherit z-10 w-32">{row.feature}</td>
-                                         {row.values.map((value, valueIndex) => (
+                                         {row.values.map((value: any, valueIndex: number) => (
                                            <td key={valueIndex} className="px-4 py-3 text-xs md:text-base text-center text-gray-700">
                                              {typeof value === 'number' ? (
                                                <div className="flex justify-center gap-1">
