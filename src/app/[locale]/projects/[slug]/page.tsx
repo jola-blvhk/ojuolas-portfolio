@@ -18,8 +18,8 @@ type Params = {
 const projectData = {
   'ark-software': {
     title: 'Ark Software',
-    headerImage: '/images/projects/ark-software-header.webp', // Building facade image
-    avatarImage: '/images/projects/ark-software-avatar.webp', // Sky crop image
+    headerImage: '/images/projects/ark-software/ark-software-header.webp', // Building facade image
+    avatarImage: '/images/projects/ark-software/ark-software-avatar.webp', // Sky crop image
       sections: {
         en: [
           { id: 'overview', title: 'Overview' },
@@ -27,10 +27,8 @@ const projectData = {
           { id: 'problem', title: 'The Problem' },
           { id: 'discovery', title: 'Discovery and Analysis' },
           { id: 'kickoff', title: 'Design Kickoff and General Planning' },
-          { id: 'guidelines', title: 'Design Guideliness' },
-          { id: 'screens', title: 'Screens' },
-          { id: 'takeaway', title: 'Take Away' },
-          { id: 'testimony', title: 'Testimony' }
+          { id: 'guidelines', title: 'Design Guideline' },
+          { id: 'takeaway', title: 'Take Away' }
         ],
         pt: [
           { id: 'overview', title: 'Visão Geral' },
@@ -39,9 +37,7 @@ const projectData = {
           { id: 'discovery', title: 'Descoberta e Análise' },
           { id: 'kickoff', title: 'Kick-off do Design e Planejamento Geral' },
           { id: 'guidelines', title: 'Diretrizes de Design' },
-          { id: 'screens', title: 'Telas' },
-          { id: 'takeaway', title: 'Conclusões' },
-          { id: 'testimony', title: 'Depoimento' }
+          { id: 'takeaway', title: 'Conclusões' }
         ]
       },
     content: {
@@ -51,7 +47,7 @@ const projectData = {
           content: `This project explores the creation of a next-generation architecture and design software—reimagining what tools like Revit, SketchUp, Spline, and Figma could achieve if combined into a single, modern platform. The goal is to merge technical precision with creative flexibility, offering architects, interior designers, and creators an environment where collaboration, AI-powered workflows, and intuitive modeling coexist seamlessly.
 
 The research phase identified limitations in current industry tools, such as fragmented user experiences, steep learning curves, and lack of modern collaboration capabilities. In response, this project proposes a unified platform that not only retains the technical rigor of established software but also integrates AI features, real-time collaboration, and freeform 3D moulding tools for custom furniture and spatial design.`,
-          image: '/images/projects/ark.webp',
+          image: '/images/projects/ark-software/ark.webp',
           projectInfo: {
             team: 'Lead UX/UI designer and Researcher.',
             tools: ['Figma/Figjam', 'Spline 3D', 'Google meet', 'Google workspace'],
@@ -152,23 +148,28 @@ The research phase identified limitations in current industry tools, such as fra
         },
         kickoff: {
           title: 'Design Kickoff and General Planning',
-          content: 'Content for Design Kickoff and General Planning section will be added here.'
+          content: 'By merging technical rigor with creative flexibility, this platform redefines how architects, designers, and makers engage with digital spaces. It lowers barriers to entry, accelerates workflows, and fosters innovation through collaboration and AI-driven assistance. Ultimately, the project sets the foundation for a future-ready ecosystem where design is more intuitive, accessible, and connected than ever before.',
+          generalPlanning: {
+            title: 'General Planning',
+            content: 'By merging technical rigor with creative flexibility, this platform redefines how architects, designers, and makers engage with digital spaces. It lowers barriers to entry, accelerates workflows, and fosters innovation through collaboration and AI-driven assistance. Ultimately, the project sets the foundation for a future-ready ecosystem where design is more intuitive, accessible, and connected than ever before.',
+            images: [
+              { src: '/images/projects/ark-software/ark-general-planning-overview.webp', alt: 'General Planning Overview', fullWidth: true },
+              { src: '/images/projects/ark-software/ark-general-planning-1.webp', alt: 'Planning Detail 1' },
+              { src: '/images/projects/ark-software/ark-general-planning-2.webp', alt: 'Planning Detail 2' }
+            ]
+          }
         },
         guidelines: {
-          title: 'Design Guideliness',
-          content: 'Content for Design Guideliness section will be added here.'
-        },
-        screens: {
-          title: 'Screens',
-          content: 'Content for Screens section will be added here.'
+          title: 'Design Guideline',
+          images: [
+            { src: '/images/projects/ark-software/ark-guidelines-1.webp', alt: 'Design Guidelines 1' },
+            { src: '/images/projects/ark-software/ark-guidelines-2.webp', alt: 'Design Guidelines 2' },
+            { src: '/images/projects/ark-software/ark-guidelines-3.webp', alt: 'Design Guidelines 3' }
+          ]
         },
         takeaway: {
           title: 'Take Away',
-          content: 'Content for Take Away section will be added here.'
-        },
-        testimony: {
-          title: 'Testimony',
-          content: 'Content for Testimony section will be added here.'
+          content: 'By merging technical rigor with creative flexibility, this platform redefines how architects, designers, and makers engage with digital spaces. It lowers barriers to entry, accelerates workflows, and fosters innovation through collaboration and AI-driven assistance. Ultimately, the project sets the foundation for a future-ready ecosystem where design is more intuitive, accessible, and connected than ever before.'
         }
       },
       pt: {
@@ -177,7 +178,7 @@ The research phase identified limitations in current industry tools, such as fra
           content: `Este projeto explora a criação de um software de arquitetura e design de próxima geração—reimaginando o que ferramentas como Revit, SketchUp, Spline e Figma poderiam alcançar se combinadas numa única plataforma moderna. O objetivo é unir precisão técnica com flexibilidade criativa, oferecendo a arquitetos, designers de interiores e criadores um ambiente onde colaboração, fluxos de trabalho alimentados por IA e modelagem intuitiva coexistem perfeitamente.
 
 A fase de pesquisa identificou limitações nas ferramentas atuais da indústria, como experiências de utilizador fragmentadas, curvas de aprendizagem íngremes e falta de capacidades modernas de colaboração. Em resposta, este projeto propõe uma plataforma unificada que não só mantém o rigor técnico do software estabelecido, mas também integra funcionalidades de IA, colaboração em tempo real e ferramentas de moldagem 3D livre para mobiliário personalizado e design espacial.`,
-          image: '/images/projects/ark.webp'
+          image: '/images/projects/ark-software/ark.webp'
         },
         process: {
           title: 'O Processo',
@@ -215,31 +216,36 @@ A fase de pesquisa identificou limitações nas ferramentas atuais da indústria
         },
         kickoff: {
           title: 'Kick-off do Design e Planejamento Geral',
-          content: 'Conteúdo para a secção Kick-off do Design e Planejamento Geral será adicionado aqui.'
+          content: 'Ao unir rigor técnico com flexibilidade criativa, esta plataforma redefine a forma como arquitetos, designers e criadores se envolvem com espaços digitais. Reduz barreiras de entrada, acelera fluxos de trabalho e promove inovação através da colaboração e assistência impulsionada por IA. Em última análise, o projeto estabelece as bases para um ecossistema preparado para o futuro, onde o design é mais intuitivo, acessível e conectado do que nunca.',
+          generalPlanning: {
+            title: 'Planejamento Geral',
+            content: 'Ao unir rigor técnico com flexibilidade criativa, esta plataforma redefine a forma como arquitetos, designers e criadores se envolvem com espaços digitais. Reduz barreiras de entrada, acelera fluxos de trabalho e promove inovação através da colaboração e assistência impulsionada por IA. Em última análise, o projeto estabelece as bases para um ecossistema preparado para o futuro, onde o design é mais intuitivo, acessível e conectado do que nunca.',
+            images: [
+              { src: '/images/projects/ark-software/ark-general-planning-overview.webp', alt: 'Visão Geral do Planejamento Geral', fullWidth: true },
+              { src: '/images/projects/ark-software/ark-general-planning-1.webp', alt: 'Detalhe de Planejamento 1' },
+              { src: '/images/projects/ark-software/ark-general-planning-2.webp', alt: 'Detalhe de Planejamento 2' }
+            ]
+          }
         },
         guidelines: {
           title: 'Diretrizes de Design',
-          content: 'Conteúdo para a secção Diretrizes de Design será adicionado aqui.'
-        },
-        screens: {
-          title: 'Telas',
-          content: 'Conteúdo para a secção Telas será adicionado aqui.'
+          images: [
+            { src: '/images/projects/ark-software/ark-guidelines-1.webp', alt: 'Diretrizes de Design 1' },
+            { src: '/images/projects/ark-software/ark-guidelines-2.webp', alt: 'Diretrizes de Design 2' },
+            { src: '/images/projects/ark-software/ark-guidelines-3.webp', alt: 'Diretrizes de Design 3' }
+          ]
         },
         takeaway: {
           title: 'Conclusões',
-          content: 'Conteúdo para a secção Conclusões será adicionado aqui.'
-        },
-        testimony: {
-          title: 'Depoimento',
-          content: 'Conteúdo para a secção Depoimento será adicionado aqui.'
+          content: 'Ao unir rigor técnico com flexibilidade criativa, esta plataforma redefine a forma como arquitetos, designers e criadores se envolvem com espaços digitais. Reduz barreiras de entrada, acelera fluxos de trabalho e promove inovação através da colaboração e assistência impulsionada por IA. Em última análise, o projeto estabelece as bases para um ecossistema preparado para o futuro, onde o design é mais intuitivo, acessível e conectado do que nunca.'
         }
       }
     }
   },
   'pikd': {
     title: 'PIKD',
-    headerImage: '/images/projects/pikd-header.webp',
-    avatarImage: '/images/projects/pikd-avatar.webp',
+    headerImage: '/images/projects/pikd/pikd-header.webp',
+    avatarImage: '/images/projects/pikd/pikd-avatar.webp',
     sections: {
       en: [
         { id: 'overview', title: 'Overview' },
@@ -264,7 +270,7 @@ A fase de pesquisa identificou limitações nas ferramentas atuais da indústria
   'hardsands-crm': {
     title: 'Hardsands CRM',
     headerImage: '/images/laptop.webp',
-    avatarImage: '/images/projects/hardsands.webp',
+    avatarImage: '/images/projects/hardsands-crm/hardsands.webp',
     sections: {
       en: [
         { id: 'overview', title: 'Overview' },
@@ -289,7 +295,7 @@ A fase de pesquisa identificou limitações nas ferramentas atuais da indústria
   'x-optimization': {
     title: 'X App Optimization',
     headerImage: '/images/laptop.webp',
-    avatarImage: '/images/projects/x.webp',
+    avatarImage: '/images/projects/x-optimization/x.webp',
     sections: {
       en: [
         { id: 'overview', title: 'Overview' },
@@ -314,7 +320,7 @@ A fase de pesquisa identificou limitações nas ferramentas atuais da indústria
   'interior-design': {
     title: 'Interior Design Portfolio',
     headerImage: '/images/laptop.webp',
-    avatarImage: '/images/projects/interior-design.webp',
+    avatarImage: '/images/projects/interior-design/interior-design.webp',
     sections: {
       en: [
         { id: 'overview', title: 'Overview' },
@@ -339,7 +345,7 @@ A fase de pesquisa identificou limitações nas ferramentas atuais da indústria
   'portfolio-website': {
     title: 'Portfolio Website',
     headerImage: '/images/laptop.webp',
-    avatarImage: '/images/projects/portfolio-website.webp',
+    avatarImage: '/images/projects/portfolio-website/portfolio-website.webp',
     sections: {
       en: [
         { id: 'overview', title: 'Overview' },
@@ -364,7 +370,7 @@ A fase de pesquisa identificou limitações nas ferramentas atuais da indústria
   'becomy': {
     title: 'Becomy',
     headerImage: '/images/laptop.webp',
-    avatarImage: '/images/projects/becomy.webp',
+    avatarImage: '/images/projects/becomy/becomy.webp',
     sections: {
       en: [
         { id: 'overview', title: 'Overview' },
@@ -550,8 +556,8 @@ export default function ProjectPage({ params }: Params) {
                        <div className="pt-8">
                          <div className="space-y-8">
                            {sectionContent.analysisTables.map((table: any, tableIndex: number) => (
-                             <div key={tableIndex} className="rounded-lg shadow-sm border border-gray-200 overflow-hidden w-full">
-                               <div className="p-4 border-b border-gray-200 bg-gray-50">
+                             <div key={tableIndex} className="rounded-lg shadow-sm border border-brand-grey overflow-hidden w-full bg-background">
+                               <div className="p-4 border-b border-brand-grey bg-background">
                                  <h3 className="font-semibold text-foreground text-lg flex items-center gap-2">
                                    <span>{table.icon}</span>
                                    {table.title}
@@ -560,10 +566,10 @@ export default function ProjectPage({ params }: Params) {
                                <div className="overflow-x-auto w-full scrollbar-none">
                                  <table className="w-full min-w-[600px] table-fixed">
                                    <thead>
-                                     <tr className="bg-gray-50">
-                                       <th className="px-4 py-3 text-left text-xs md:text-base font-medium text-gray-700 sticky left-0 bg-gray-50 z-10 w-32">Feature</th>
+                                     <tr className="bg-brand-grey">
+                                       <th className="px-4 py-3 text-left text-xs md:text-base font-medium text-foreground sticky left-0 bg-brand-grey z-10 w-32">Feature</th>
                                        {table.columns.map((column: string, colIndex: number) => (
-                                         <th key={colIndex} className="px-4 py-3 text-center text-xs md:text-base font-medium text-gray-700">
+                                         <th key={colIndex} className="px-4 py-3 text-center text-xs md:text-base font-medium text-foreground">
                                            {column}
                                          </th>
                                        ))}
@@ -571,10 +577,10 @@ export default function ProjectPage({ params }: Params) {
                                    </thead>
                                    <tbody>
                                      {table.rows.map((row: any, rowIndex: number) => (
-                                       <tr key={rowIndex} className={rowIndex % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
-                                         <td className="px-4 py-3 text-xs md:text-base font-medium text-gray-900 sticky left-0 bg-inherit z-10 w-32">{row.feature}</td>
+                                       <tr key={rowIndex} className={rowIndex % 2 === 0 ? 'bg-background' : 'bg-brand-grey'}>
+                                         <td className="px-4 py-3 text-xs md:text-base font-medium text-foreground sticky left-0 bg-inherit z-10 w-32">{row.feature}</td>
                                          {row.values.map((value: any, valueIndex: number) => (
-                                           <td key={valueIndex} className="px-4 py-3 text-xs md:text-base text-center text-gray-700">
+                                           <td key={valueIndex} className="px-4 py-3 text-xs md:text-base text-center text-brand-shadow">
                                              {typeof value === 'number' ? (
                                                <div className="flex justify-center gap-1">
                                                  {[1, 2, 3, 4, 5].map((star) => (
@@ -596,6 +602,70 @@ export default function ProjectPage({ params }: Params) {
                                    </tbody>
                                  </table>
                                </div>
+                             </div>
+                           ))}
+                         </div>
+                       </div>
+                     )}
+                     {sectionContent?.generalPlanning && (
+                       <div className="pt-8 md:pt-[42px]">
+                         <h3 className="mb-4 text-base md:text-2xl font-medium text-foreground">
+                           {sectionContent.generalPlanning.title}
+                         </h3>
+                         {sectionContent.generalPlanning.content && (
+                           <div className="text-xs md:text-base leading-[200%] whitespace-pre-line mb-8 text-brand-shadow">
+                             {sectionContent.generalPlanning.content}
+                           </div>
+                         )}
+                         {sectionContent.generalPlanning.images && (
+                           <div className="space-y-8">
+                             {sectionContent.generalPlanning.images.map((img: any, imgIndex: number) => {
+                               if (img.fullWidth) {
+                                 return (
+                                   <div key={imgIndex} className="w-full">
+                                     <Image
+                                       src={img.src}
+                                       alt={img.alt}
+                                       width={1200}
+                                       height={600}
+                                       className="w-full h-auto rounded-lg"
+                                     />
+                                   </div>
+                                 );
+                               }
+                               return null;
+                             })}
+                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                               {sectionContent.generalPlanning.images
+                                 .filter((img: any) => !img.fullWidth)
+                                 .map((img: any, imgIndex: number) => (
+                                   <div key={imgIndex} className="w-full">
+                                     <Image
+                                       src={img.src}
+                                       alt={img.alt}
+                                       width={600}
+                                       height={400}
+                                       className="w-full h-auto rounded-lg"
+                                     />
+                                   </div>
+                                 ))}
+                             </div>
+                           </div>
+                         )}
+                       </div>
+                     )}
+                     {sectionContent?.images && !sectionContent.generalPlanning && (
+                       <div className="pt-8 md:pt-[42px]">
+                         <div className="space-y-8">
+                           {sectionContent.images.map((img: any, imgIndex: number) => (
+                             <div key={imgIndex} className="w-full">
+                               <Image
+                                 src={img.src}
+                                 alt={img.alt}
+                                 width={1200}
+                                 height={600}
+                                 className="w-full h-auto rounded-lg"
+                               />
                              </div>
                            ))}
                          </div>
