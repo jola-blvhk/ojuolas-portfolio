@@ -11,7 +11,7 @@
     {
       "title": "Ark Software",
       "description": "Reimagining architecture software with a modern UI, AI and real‑time collaboration.",
-      "image": "/images/projects/ark.webp",
+      "image": "/images/projects/ark-software/ark.webp",
       "slug": "ark-software"
     },
     {
@@ -23,31 +23,31 @@
     {
       "title": "Hardsands CRM",
       "description": "Providing tailored solutions to enhance communication, streamline processes, and drive growth. **Turning leads to contacts** made easy.",
-      "image": "/images/projects/hardsands.webp",
+      "image": "/images/projects/hardsands-crm/hardsands.webp",
       "slug": "hardsands-crm"
     },
     {
       "title": "X App Optimization",
       "description": "The goal is **improving user experience through optimization**, to find and fix current flaws and inefficiencies inside the twitter network.",
-      "image": "/images/projects/x.webp",
+      "image": "/images/projects/x-optimization/x.webp",
       "slug": "x-optimization"
     },
     {
       "title": "Interior Design Portfolio",
       "description": "A **one stop market place** for all things furniture, accessories and more.",
-      "image": "/images/projects/interior-design.webp",
+      "image": "/images/projects/interior-design/interior-design.webp",
       "slug": "interior-design"
     },
     {
       "title": "Portfolio Website",
       "description": "**Personality in Design**, A functional portfolio for a front end developer with a big personality.",
-      "image": "/images/projects/portfolio-website.webp",
+      "image": "/images/projects/portfolio-website/portfolio-website.webp",
       "slug": "portfolio-website"
     },
     {
       "title": "Becomy",
       "description": "**A saas e-commerce platform**, 5 minutes to create your site 100% customizable, optimized for conversion and without commission.",
-      "image": "/images/projects/becomy.webp",
+      "image": "/images/projects/becomy/becomy.webp",
       "slug": "becomy"
     }
   ]

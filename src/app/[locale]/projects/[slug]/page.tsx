@@ -834,27 +834,110 @@ A fase de pesquisa identificou limitações nas ferramentas atuais da indústria
   },
   'hardsands-crm': {
     title: 'Hardsands CRM',
-    headerImage: '/images/laptop.webp',
-    avatarImage: '/images/projects/hardsands-crm/hardsands.webp',
+    headerImage: '/images/projects/hardsands-crm/hardsands-header.webp',
+    avatarImage: '/images/projects/hardsands-crm/hardsands-avatar.webp',
     sections: {
       en: [
         { id: 'overview', title: 'Overview' },
         { id: 'process', title: 'The Process' },
-        { id: 'research', title: 'User Research' },
-        { id: 'design', title: 'Design System' },
-        { id: 'prototype', title: 'Prototype' },
-        { id: 'testing', title: 'User Testing' },
-        { id: 'results', title: 'Results' }
+        { id: 'discovery', title: 'Discovery and research' },
+        { id: 'takeaway', title: 'Take Away' },
+        { id: 'testimony', title: 'Testimony' }
       ],
       pt: [
         { id: 'overview', title: 'Visão Geral' },
         { id: 'process', title: 'O Processo' },
-        { id: 'research', title: 'Pesquisa de Utilizadores' },
-        { id: 'design', title: 'Sistema de Design' },
-        { id: 'prototype', title: 'Protótipo' },
-        { id: 'testing', title: 'Testes de Utilizadores' },
-        { id: 'results', title: 'Resultados' }
+        { id: 'discovery', title: 'Descoberta e pesquisa' },
+        { id: 'takeaway', title: 'Conclusões' },
+        { id: 'testimony', title: 'Depoimento' }
       ]
+    },
+    content: {
+      en: {
+        overview: {
+          content: 'Empowering Business Relationships: This versatile CRM platform caters to the needs of both small and large-scale businesses. Seamlessly manage interactions, track leads, and nurture customer relationships through a user-friendly interface. From startups to enterprises, This CRM provides tailored solutions to enhance communication, streamline processes, and drive growth. Experience efficient collaboration, data-driven insights, and customer-centricity like never before. I was tasked with executing on the above opportunity. To deliver a unique experience that would provide the average business effective access to this kind of service in the most convenient way possible. The final deliverable was a suite of 3 products. Hardsands Pro Web app, iOS App and Android app',
+          projectInfo: {
+            team: 'UX/UI designer and Researcher.\n3 developers\n1 Product manager\n1 Designer',
+            tools: ['Figma/Figjam', 'Google forms', 'Slack', 'Google sheet', 'Google meet'],
+            duration: '13 weeks sprint'
+          },
+          images: [
+            '/images/projects/hardsands-crm/Contact Profile.webp',
+            '/images/projects/hardsands-crm/Create Invoice.webp',
+            '/images/projects/hardsands-crm/Task Analytics.webp',
+            '/images/projects/hardsands-crm/Leads Analytics.webp',
+            '/images/projects/hardsands-crm/Analytics.webp',
+            '/images/projects/hardsands-crm/Messages.webp',
+            '/images/projects/hardsands-crm/Teammate profile.webp',
+            '/images/projects/hardsands-crm/Task.webp',
+            '/images/projects/hardsands-crm/Mail.webp'
+          ]
+        }
+      },
+      pt: {
+        overview: {
+          content: 'Potenciar Relações Empresariais: Esta plataforma CRM versátil atende às necessidades de empresas de pequena e grande escala. Gerencie interações, rastreie leads e nutra relacionamentos com clientes através de uma interface intuitiva. De startups a empresas, este CRM oferece soluções personalizadas para melhorar a comunicação, simplificar processos e impulsionar o crescimento. Experimente colaboração eficiente, insights baseados em dados e foco no cliente como nunca antes. Fui encarregado de executar a oportunidade acima. Entregar uma experiência única que proporcionaria às empresas acesso efetivo a este tipo de serviço da forma mais conveniente possível. O resultado final foi um conjunto de 3 produtos. Hardsands Pro Web app, App iOS e App Android',
+          projectInfo: {
+            team: 'UX/UI designer e Investigador.\n3 programadores\n1 Gestor de produto\n1 Designer',
+            tools: ['Figma/Figjam', 'Google forms', 'Slack', 'Google sheet', 'Google meet'],
+            duration: 'Sprint de 13 semanas'
+          },
+          images: [
+            '/images/projects/hardsands-crm/Contact Profile.webp',
+            '/images/projects/hardsands-crm/Create Invoice.webp',
+            '/images/projects/hardsands-crm/Task Analytics.webp',
+            '/images/projects/hardsands-crm/Leads Analytics.webp',
+            '/images/projects/hardsands-crm/Analytics.webp',
+            '/images/projects/hardsands-crm/Messages.webp',
+            '/images/projects/hardsands-crm/Teammate profile.webp',
+            '/images/projects/hardsands-crm/Task.webp',
+            '/images/projects/hardsands-crm/Mail.webp'
+          ]
+        },
+        process: {
+          title: 'The Process',
+          timeline: [
+            { step: 1, title: 'Kick-off/Heuristic evaluation' },
+            { step: 2, title: 'Discovery and Research' },
+            { step: 3, title: 'Ideation' },
+            { step: 4, title: 'Design' },
+            { step: 5, title: 'Hand off' },
+            { step: 6, title: 'Take away' }
+          ]
+        }
+      },
+      pt: {
+        overview: {
+          content: 'Potenciar Relações Empresariais: Esta plataforma CRM versátil atende às necessidades de empresas de pequena e grande escala. Gerencie interações, rastreie leads e nutra relacionamentos com clientes através de uma interface intuitiva. De startups a empresas, este CRM oferece soluções personalizadas para melhorar a comunicação, simplificar processos e impulsionar o crescimento. Experimente colaboração eficiente, insights baseados em dados e foco no cliente como nunca antes. Fui encarregado de executar a oportunidade acima. Entregar uma experiência única que proporcionaria às empresas acesso efetivo a este tipo de serviço da forma mais conveniente possível. O resultado final foi um conjunto de 3 produtos. Hardsands Pro Web app, App iOS e App Android',
+          projectInfo: {
+            team: 'UX/UI designer e Investigador.\n3 programadores\n1 Gestor de produto\n1 Designer',
+            tools: ['Figma/Figjam', 'Google forms', 'Slack', 'Google sheet', 'Google meet'],
+            duration: 'Sprint de 13 semanas'
+          },
+          images: [
+            '/images/projects/hardsands-crm/Contact Profile.webp',
+            '/images/projects/hardsands-crm/Create Invoice.webp',
+            '/images/projects/hardsands-crm/Task Analytics.webp',
+            '/images/projects/hardsands-crm/Leads Analytics.webp',
+            '/images/projects/hardsands-crm/Analytics.webp',
+            '/images/projects/hardsands-crm/Messages.webp',
+            '/images/projects/hardsands-crm/Teammate profile.webp',
+            '/images/projects/hardsands-crm/Task.webp',
+            '/images/projects/hardsands-crm/Mail.webp'
+          ]
+        },
+        process: {
+          title: 'O Processo',
+          timeline: [
+            { step: 1, title: 'Kick-off/Avaliação Heurística' },
+            { step: 2, title: 'Descoberta e Pesquisa' },
+            { step: 3, title: 'Ideação' },
+            { step: 4, title: 'Design' },
+            { step: 5, title: 'Entrega' },
+            { step: 6, title: 'Conclusões' }
+          ]
+        }
+      }
     }
   },
   'x-optimization': {
@@ -1270,8 +1353,8 @@ export default function ProjectPage({ params }: Params) {
                        <div className="pt-8">
                          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 ">
                            <div>
-                             <h3 className="font-medium text-base md:text-2xl text-foreground mb-3">Team</h3>
-                             <p className="text-brand-shadow text-xs md:text-base">{sectionContent.projectInfo.team}</p>
+                            <h3 className="font-medium text-base md:text-2xl text-foreground mb-3">Team</h3>
+                            <p className="text-brand-shadow text-xs md:text-base whitespace-pre-line">{sectionContent.projectInfo.team}</p>
                            </div>
                            <div>
                              <h3 className="font-medium  text-base md:text-2xl text-foreground mb-3">Tools</h3>
@@ -1281,14 +1364,16 @@ export default function ProjectPage({ params }: Params) {
                                ))}
                              </ul>
                            </div>
-                           <div>
-                             <h3 className="font-medium text-base md:text-2xl text-foreground mb-3">Duration</h3>
-                             <p className="text-brand-shadow text-xs md:text-base">{sectionContent.projectInfo.duration}</p>
-                           </div>
-                           <div>
-                             <h3 className="font-medium  text-base md:text-2xl text-foreground mb-3">Funds</h3>
-                             <p className="text-brand-shadow text-xs md:text-base">{sectionContent.projectInfo.funds}</p>
-                           </div>
+                          <div>
+                            <h3 className="font-medium text-base md:text-2xl text-foreground mb-3">Duration</h3>
+                            <p className="text-brand-shadow text-xs md:text-base">{sectionContent.projectInfo.duration}</p>
+                          </div>
+                          {sectionContent.projectInfo.funds && (
+                            <div>
+                              <h3 className="font-medium  text-base md:text-2xl text-foreground mb-3">Funds</h3>
+                              <p className="text-brand-shadow text-xs md:text-base">{sectionContent.projectInfo.funds}</p>
+                            </div>
+                          )}
                          </div>
                        </div>
                      )}

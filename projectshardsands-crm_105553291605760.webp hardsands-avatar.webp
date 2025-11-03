@@ -1,0 +1,56 @@
+warning: in the working copy of 'public/locales/en/common.json', LF will be replaced by CRLF the next time Git touches it
+[1mdiff --git a/public/locales/en/common.json b/public/locales/en/common.json[m
+[1mindex fd1b6dc..95a4679 100644[m
+[1m--- a/public/locales/en/common.json[m
+[1m+++ b/public/locales/en/common.json[m
+[36m@@ -11,43 +11,43 @@[m
+     {[m
+       "title": "Ark Software",[m
+       "description": "Reimagining architecture software with a modern UI, AI and real‑time collaboration.",[m
+[31m-      "image": "/images/projects/ark.webp",[m
+[32m+[m[32m      "image": "/images/projects/ark-software/ark-software-avatar.webp",[m
+       "slug": "ark-software"[m
+     },[m
+     {[m
+       "title": "PIKD",[m
+       "description": "Pikd  engages users to win items like **collectibles on their AR screen.** Users earn points for collecting items, inviting friends, etc.",[m
+[31m-      "image": "/images/projects/pikd.webp",[m
+[32m+[m[32m      "image": "/images/projects/pikd/pikd-avatar.webp",[m
+       "slug": "pikd"[m
+     },[m
+     {[m
+       "title": "Hardsands CRM",[m
+       "description": "Providing tailored solutions to enhance communication, streamline processes, and drive growth. **Turning leads to contacts** made easy.",[m
+[31m-      "image": "/images/projects/hardsands.webp",[m
+[32m+[m[32m      "image": "/images/projects/hardsands-crm/hardsands.webp",[m
+       "slug": "hardsands-crm"[m
+     },[m
+     {[m
+       "title": "X App Optimization",[m
+       "description": "The goal is **improving user experience through optimization**, to find and fix current flaws and inefficiencies inside the twitter network.",[m
+[31m-      "image": "/images/projects/x.webp",[m
+[32m+[m[32m      "image": "/images/projects/x-optimization/x.webp",[m
+       "slug": "x-optimization"[m
+     },[m
+     {[m
+       "title": "Interior Design Portfolio",[m
+       "description": "A **one stop market place** for all things furniture, accessories and more.",[m
+[31m-      "image": "/images/projects/interior-design.webp",[m
+[32m+[m[32m      "image": "/images/projects/interior-design/interior-design.webp",[m
+       "slug": "interior-design"[m
+     },[m
+     {[m
+       "title": "Portfolio Website",[m
+       "description": "**Personality in Design**, A functional portfolio for a front end developer with a big personality.",[m
+[31m-      "image": "/images/projects/portfolio-website.webp",[m
+[32m+[m[32m      "image": "/images/projects/portfolio-website/portfolio-website.webp",[m
+       "slug": "portfolio-website"[m
+     },[m
+     {[m
+       "title": "Becomy",[m
+       "description": "**A saas e-commerce platform**, 5 minutes to create your site 100% customizable, optimized for conversion and without commission.",[m
+[31m-      "image": "/images/projects/becomy.webp",[m
+[32m+[m[32m      "image": "/images/projects/becomy/becomy.webp",[m
+       "slug": "becomy"[m
+     }[m
+   ][m
