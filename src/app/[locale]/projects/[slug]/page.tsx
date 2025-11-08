@@ -872,27 +872,6 @@ A fase de pesquisa identificou limitações nas ferramentas atuais da indústria
             '/images/projects/hardsands-crm/Task.webp',
             '/images/projects/hardsands-crm/Mail.webp'
           ]
-        }
-      },
-      pt: {
-        overview: {
-          content: 'Potenciar Relações Empresariais: Esta plataforma CRM versátil atende às necessidades de empresas de pequena e grande escala. Gerencie interações, rastreie leads e nutra relacionamentos com clientes através de uma interface intuitiva. De startups a empresas, este CRM oferece soluções personalizadas para melhorar a comunicação, simplificar processos e impulsionar o crescimento. Experimente colaboração eficiente, insights baseados em dados e foco no cliente como nunca antes. Fui encarregado de executar a oportunidade acima. Entregar uma experiência única que proporcionaria às empresas acesso efetivo a este tipo de serviço da forma mais conveniente possível. O resultado final foi um conjunto de 3 produtos. Hardsands Pro Web app, App iOS e App Android',
-          projectInfo: {
-            team: 'UX/UI designer e Investigador.\n3 programadores\n1 Gestor de produto\n1 Designer',
-            tools: ['Figma/Figjam', 'Google forms', 'Slack', 'Google sheet', 'Google meet'],
-            duration: 'Sprint de 13 semanas'
-          },
-          images: [
-            '/images/projects/hardsands-crm/Contact Profile.webp',
-            '/images/projects/hardsands-crm/Create Invoice.webp',
-            '/images/projects/hardsands-crm/Task Analytics.webp',
-            '/images/projects/hardsands-crm/Leads Analytics.webp',
-            '/images/projects/hardsands-crm/Analytics.webp',
-            '/images/projects/hardsands-crm/Messages.webp',
-            '/images/projects/hardsands-crm/Teammate profile.webp',
-            '/images/projects/hardsands-crm/Task.webp',
-            '/images/projects/hardsands-crm/Mail.webp'
-          ]
         },
         process: {
           title: 'The Process',
@@ -904,6 +883,32 @@ A fase de pesquisa identificou limitações nas ferramentas atuais da indústria
             { step: 5, title: 'Hand off' },
             { step: 6, title: 'Take away' }
           ]
+        },
+        discovery: {
+          title: 'Discovery and research',
+          content: 'I spearheaded a comprehensive mixed research (Quantitative and qualitative research) to gain insights into the users painpoints, identifying where the app succeeds and areas of opportunity.',
+          images: [
+            { src: '/images/projects/hardsands-crm/hardsands-discovery.webp', alt: 'Hardsands Discovery and Research' }
+          ]
+        },
+        takeaway: {
+          title: 'Take Away',
+          content: `The current version of PIKD lacks a cohesive design system, which affects usability, visual clarity, and development efficiency. A playful, unified, and component-driven design system is crucial to enhance both user experience and brand appeal — especially for a Gen Z audience who values clean visuals, intuitive interactions, and meaningful rewards. To solve this i`,
+          items: [
+            'Establish a design system foundation.',
+            'Defined a Playful & Gen Z-Friendly Visual Language. Use vibrant but balanced colors and bold typography that reflects Gen Z energy.',
+            'Add micro-interactions (e.g., hover effects, tap animations, "collect" animations) to create a delightful user experience.',
+            'Incorporate fun, gamified elements like token progress bars, level badges, confetti, or visual collectibles.',
+            'I enjoyed working with my incredible team because their feedback and suggestions were very insightful and constructive.',
+            'and i think this contributed to the success of the overall final product.'
+          ]
+        },
+        testimony: {
+          title: 'Testimony',
+          quote: `Ojuola was able to translate our product requirements into well crafted UI designs. Her attention to detail, ability to capture edge cases and their disciplined attitude towards work made working with her a blissful experience. I highly recommend her!`,
+          author: 'Okeke Felix',
+          role: 'Co founder',
+          avatar: '/images/projects/hardsands-crm/felix-okeke.webp'
         }
       },
       pt: {
@@ -936,13 +941,39 @@ A fase de pesquisa identificou limitações nas ferramentas atuais da indústria
             { step: 5, title: 'Entrega' },
             { step: 6, title: 'Conclusões' }
           ]
+        },
+        discovery: {
+          title: 'Descoberta e pesquisa',
+          content: 'Liderei uma pesquisa mista abrangente (pesquisa quantitativa e qualitativa) para obter insights sobre os pontos problemáticos dos utilizadores, identificando onde a aplicação tem sucesso e áreas de oportunidade.',
+          images: [
+            { src: '/images/projects/hardsands-crm/hardsands-discovery.webp', alt: 'Descoberta e Pesquisa Hardsands' }
+          ]
+        },
+        takeaway: {
+          title: 'Conclusões',
+          content: `A versão atual do PIKD carece de um sistema de design coeso, o que afeta a usabilidade, a clareza visual e a eficiência de desenvolvimento. Um sistema de design lúdico, unificado e orientado por componentes é crucial para melhorar tanto a experiência do utilizador quanto o apelo da marca — especialmente para um público da Geração Z que valoriza visuais limpos, interações intuitivas e recompensas significativas. Para resolver isto`,
+          items: [
+            'Estabelecer uma base de sistema de design.',
+            'Definir uma Linguagem Visual Lúdica e Amigável à Geração Z. Usar cores vibrantes mas equilibradas e tipografia ousada que reflita a energia da Geração Z.',
+            'Adicionar micro-interações (por exemplo, efeitos de hover, animações de toque, animações de "colecionar") para criar uma experiência de utilizador deliciosa.',
+            'Incorporar elementos divertidos e gamificados como barras de progresso de tokens, badges de nível, confetes ou colecionáveis visuais.',
+            'Gostei de trabalhar com a minha equipa incrível porque o seu feedback e sugestões foram muito perspicazes e construtivos.',
+            'e acho que isto contribuiu para o sucesso do produto final geral.'
+          ]
+        },
+        testimony: {
+          title: 'Depoimento',
+          quote: `A Ojuola conseguiu traduzir os nossos requisitos de produto em designs de UI bem elaborados. A sua atenção ao detalhe, capacidade de capturar casos extremos e a sua atitude disciplinada em relação ao trabalho tornaram trabalhar com ela uma experiência abençoada. Recomendo-a vivamente!`,
+          author: 'Okeke Felix',
+          role: 'Co-fundador',
+          avatar: '/images/projects/hardsands-crm/felix-okeke.webp'
         }
       }
     }
   },
   'x-optimization': {
     title: 'X App Optimization',
-    headerImage: '/images/laptop.webp',
+    headerImage: '/images/projects/x-optimization/x-header.webp',
     avatarImage: '/images/projects/x-optimization/x.webp',
     sections: {
       en: [
