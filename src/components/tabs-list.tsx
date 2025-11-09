@@ -10,11 +10,13 @@ type TabItem = {
 type TabsListProps = {
   items: TabItem[];
   initialActiveIndex?: number;
+  activeIndex?: number;
   onChange?: (index: number, item: TabItem) => void;
 };
 
-export default function TabsList({ items, initialActiveIndex = 0, onChange }: TabsListProps) {
-  const [activeIndex, setActiveIndex] = useState<number>(initialActiveIndex);
+export default function TabsList({ items, initialActiveIndex = 0, activeIndex: controlledActiveIndex, onChange }: TabsListProps) {
+  const [internalActiveIndex, setInternalActiveIndex] = useState<number>(initialActiveIndex);
+  const activeIndex = controlledActiveIndex !== undefined ? controlledActiveIndex : internalActiveIndex;
 
   return (
     <nav className="w-full overflow-x-auto scrollbar-none ">
@@ -30,7 +32,9 @@ export default function TabsList({ items, initialActiveIndex = 0, onChange }: Ta
                   (isActive ? " text-foreground font-medium" : " hover:font-medium hover:text-foreground")
                 }
                 onClick={() => {
-                  setActiveIndex(index);
+                  if (controlledActiveIndex === undefined) {
+                    setInternalActiveIndex(index);
+                  }
                   onChange?.(index, item);
                 }}
               >
