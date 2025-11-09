@@ -974,26 +974,390 @@ A fase de pesquisa identificou limitações nas ferramentas atuais da indústria
   'x-optimization': {
     title: 'X App Optimization',
     headerImage: '/images/projects/x-optimization/x-header.webp',
-    avatarImage: '/images/projects/x-optimization/x.webp',
+    avatarImage: '/images/projects/x-optimization/x-avatar.webp',
     sections: {
       en: [
         { id: 'overview', title: 'Overview' },
+        { id: 'objective', title: 'Objective' },
         { id: 'process', title: 'The Process' },
-        { id: 'research', title: 'User Research' },
-        { id: 'design', title: 'Design System' },
-        { id: 'prototype', title: 'Prototype' },
-        { id: 'testing', title: 'User Testing' },
-        { id: 'results', title: 'Results' }
+        { id: 'discovery-research', title: 'Discovery and Research' }
       ],
       pt: [
         { id: 'overview', title: 'Visão Geral' },
+        { id: 'objective', title: 'Objetivo' },
         { id: 'process', title: 'O Processo' },
-        { id: 'research', title: 'Pesquisa de Utilizadores' },
-        { id: 'design', title: 'Sistema de Design' },
-        { id: 'prototype', title: 'Protótipo' },
-        { id: 'testing', title: 'Testes de Utilizadores' },
-        { id: 'results', title: 'Resultados' }
+        { id: 'discovery-research', title: 'Descoberta e Pesquisa' }
       ]
+    },
+    content: {
+      en: {
+        overview: {
+          title: 'Overview',
+          content: `Twitter app is a social media platform that allows users to share and discover short messages called tweets. These tweets may include links, pictures, videos, text, and other types of material. Individuals have the ability to follow one another, and the tweets of individuals they follow show up in their timeline, generating a continuous feed of updates.`
+        },
+        objective: {
+          title: 'Objective',
+          content: `Using Twitter as a case study, the goal of improving user experience through app optimization is to find and fix current flaws and inefficiencies inside the Twitter network. Enhancing user happiness, engagement, and general usability is the main goal. The goal is to provide focused solutions that enhance Twitter's user interface, navigation, and feature functionality via a thorough examination of performance concerns, usability difficulties, and functional faults. This approach entails not just fixing current issues but also introducing cutting-edge features and AI-powered improvements to improve the Twitter app's overall user experience. The goal is to make Twitter's broad user base's experience more consistent, effective, and pleasurable by incorporating new features and addressing user issues.`,
+          image: '/images/projects/x-optimization/x-objective.webp',
+          projectInfo: {
+            tools: ['Figma/Figjam', 'Spline 3D', 'Google meet', 'Google workspace'],
+            duration: 'Ongoing'
+          }
+        },
+        process: {
+          title: 'The Process',
+          timeline: [
+            { step: 1, title: 'Research' },
+            { step: 2, title: 'Discover' },
+            { step: 3, title: 'Ideate' },
+            { step: 4, title: 'Design' }
+          ]
+        },
+        'discovery-research': {
+          title: 'Discovery and Research',
+          content: `I spearheaded a comprehensive mixed research (Quantitative and qualitative research) to gain insights into the users painpoints, identifying where the app succeeds and areas of opportunity.
+
+These methodologies provide insights into user behaviors, preferences, and pain points. Here are some UX research methodologies used:`,
+          items: [
+            'User Interviews: I conducted one-on-one interviews with users to gather qualitative insights into their experiences, preferences, and expectations.',
+            'Social Media Listening: Monitored social media platforms for user feedback, sentiments, and discussions related to the app.',
+            'Surveys and Questionnaires: I collected quantitative data on a large scale. This method is helpful in identifying patterns, and prioritizing optimization efforts.',
+            'Competitor Analysis: Analyzed the user experiences of competitors\' apps for best practices, industry standards, and areas where the app can stand out or improve.'
+          ],
+          researchQuestions: {
+            title: 'Research questions',
+            categories: [
+              {
+                category: 'General Experience',
+                questions: [
+                  'How often do you use the Twitter app?',
+                  'What are the main reasons for using Twitter?',
+                  'How satisfied are you with the overall user experience of the Twitter app?'
+                ]
+              },
+              {
+                category: 'Usability and Navigation',
+                questions: [
+                  'How easy is it for you to navigate through different sections of the Twitter app?',
+                  'Are you able to find the features you need easily within the app?',
+                  'Do you encounter any difficulties when performing common tasks, such as composing tweets, retweeting, or searching for content?'
+                ]
+              },
+              {
+                category: 'Performance and Speed',
+                questions: [
+                  'How would you rate the performance and speed of the Twitter app (e.g., loading times, responsiveness)?',
+                  'Have you experienced any issues with app crashes, freezes, or slow loading times?'
+                ]
+              },
+              {
+                category: 'Feature Satisfaction',
+                questions: [
+                  'Which features of the Twitter app do you find most useful and engaging?',
+                  'Are there any features you wish were available or improved within the app?',
+                  'How satisfied are you with the quality and functionality of media attachments (images, videos, GIFs) in tweets?'
+                ]
+              },
+              {
+                category: 'Notifications and Alerts',
+                questions: [
+                  'How do you feel about the frequency and relevance of notifications you receive from the Twitter app?',
+                  'Do you find notifications helpful in keeping you updated with relevant content and activities on Twitter?'
+                ]
+              },
+              {
+                category: 'Privacy and Security',
+                questions: [
+                  'How confident are you in the privacy and security measures implemented by Twitter to protect your personal information and data?',
+                  'Are there any privacy concerns or features you would like to see enhanced for better security?'
+                ]
+              },
+              {
+                category: 'Demographic Information',
+                questions: [
+                  'What is your age range?',
+                  'What is your level of education?',
+                  'What is your occupation?'
+                ]
+              }
+            ]
+          },
+          researchFindings: {
+            ageRange: {
+              title: 'Age Range',
+              segments: [
+                { label: '18-25', value: 45, color: '#EF4444' },
+                { label: '26-35', value: 35, color: '#F97316' },
+                { label: '36 and above', value: 20, color: '#3B82F6' }
+              ]
+            },
+            literacy: {
+              title: 'Literacy',
+              segments: [
+                { label: 'Above average', value: 50, color: '#EF4444' },
+                { label: 'Mid', value: 35, color: '#F97316' },
+                { label: 'Below average', value: 15, color: '#3B82F6' }
+              ]
+            },
+            metrics: [
+              { label: 'General Experience', value: 70 },
+              { label: 'Usability and Navigation', value: 65 }
+            ],
+            priorityFeatures: {
+              title: 'List of features based on priority',
+              features: [
+                { name: 'Bookmark Collection', priority: 100 },
+                { name: 'Integrated Polls', priority: 85 },
+                { name: 'Media Collection', priority: 75 },
+                { name: 'Edit Private Message', priority: 65 },
+                { name: 'Real-time Language Translation', priority: 50 },
+                { name: 'Predictive Hashtags', priority: 40 },
+                { name: 'Image and Video Descriptions', priority: 30 },
+                { name: 'Automated Sentiment Analysis', priority: 20 }
+              ]
+            },
+            keyFeatures: {
+              title: 'Key feature focus',
+              features: [
+                {
+                  name: 'Bookmark Collection',
+                  description: 'Allow users to create collections of bookmarked tweets for better organization and reference.'
+                },
+                {
+                  name: 'Integrated Polls',
+                  description: 'Expand the polling feature to allow users to create and participate in polls directly within tweets and spaces.'
+                },
+                {
+                  name: 'Media Collection',
+                  description: 'Allow users to create collections of bookmarked tweets for better organization and reference.'
+                },
+                {
+                  name: 'Edit Private Message',
+                  description: 'Introduce the ability to edit messages within a short timeframe after sending to correct errors or update information.'
+                },
+                {
+                  name: 'Translate tweets',
+                  description: 'Translate posts in real time'
+                }
+              ]
+            },
+            featureDetails: {
+              title: 'Features Detail',
+              features: [
+                {
+                  name: 'Bookmark Collection',
+                  description: 'Allow users to create collections of bookmarked tweets for better organization and reference.',
+                  image: '/images/projects/x-optimization/x-bookmark.webp'
+                },
+                {
+                  name: 'Integrated polls',
+                  description: 'Expand the polling feature to allow users to create and participate in polls directly within tweets and spaces.',
+                  image: '/images/projects/x-optimization/x-polls.webp'
+                },
+                {
+                  name: 'Media Collection',
+                  description: 'Allow users to create collections of bookmarked tweets for better organization and reference.',
+                  image: '/images/projects/x-optimization/x-media.webp'
+                },
+                {
+                  name: 'Edit Private Message',
+                  description: 'Introduce the ability to edit messages within a short timeframe after sending to correct errors or update information.',
+                  image: '/images/projects/x-optimization/x-private-message.webp'
+                },
+                {
+                  name: 'Translate tweets',
+                  description: 'Translate posts in real time',
+                  image: '/images/projects/x-optimization/x-translate.webp'
+                }
+              ]
+            }
+          }
+        }
+      },
+      pt: {
+        overview: {
+          title: 'Visão Geral',
+          content: `O aplicativo Twitter é uma plataforma de redes sociais que permite aos utilizadores partilhar e descobrir mensagens curtas chamadas tweets. Estes tweets podem incluir links, imagens, vídeos, texto e outros tipos de material. Os indivíduos têm a capacidade de seguir uns aos outros, e os tweets dos indivíduos que seguem aparecem na sua linha do tempo, gerando um feed contínuo de atualizações.`
+        },
+        objective: {
+          title: 'Objetivo',
+          content: `Usando o Twitter como estudo de caso, o objetivo de melhorar a experiência do utilizador através da otimização da aplicação é encontrar e corrigir falhas e ineficiências atuais dentro da rede Twitter. Melhorar a felicidade, o envolvimento e a usabilidade geral do utilizador é o objetivo principal. O objetivo é fornecer soluções focadas que melhorem a interface do utilizador, a navegação e a funcionalidade das funcionalidades do Twitter através de um exame minucioso das preocupações de desempenho, dificuldades de usabilidade e falhas funcionais. Esta abordagem implica não apenas corrigir problemas atuais, mas também introduzir funcionalidades inovadoras e melhorias alimentadas por IA para melhorar a experiência geral do utilizador da aplicação Twitter. O objetivo é tornar a experiência da ampla base de utilizadores do Twitter mais consistente, eficaz e agradável, incorporando novas funcionalidades e abordando questões dos utilizadores.`,
+          image: '/images/projects/x-optimization/x-objective.webp',
+          projectInfo: {
+            tools: ['Figma/Figjam', 'Spline 3D', 'Google meet', 'Google workspace'],
+            duration: 'Em curso'
+          }
+        },
+        process: {
+          title: 'O Processo',
+          timeline: [
+            { step: 1, title: 'Pesquisa' },
+            { step: 2, title: 'Descoberta' },
+            { step: 3, title: 'Ideação' },
+            { step: 4, title: 'Design' }
+          ]
+        },
+        'discovery-research': {
+          title: 'Descoberta e Pesquisa',
+          content: `Liderei uma investigação mista abrangente (investigação quantitativa e qualitativa) para obter insights sobre os pontos problemáticos dos utilizadores, identificando onde a aplicação tem sucesso e áreas de oportunidade.
+
+Estas metodologias fornecem insights sobre comportamentos, preferências e pontos problemáticos dos utilizadores. Aqui estão algumas metodologias de investigação UX utilizadas:`,
+          items: [
+            'Entrevistas com Utilizadores: Realizei entrevistas individuais com utilizadores para recolher insights qualitativos sobre as suas experiências, preferências e expectativas.',
+            'Escuta de Redes Sociais: Monitorizei plataformas de redes sociais para feedback dos utilizadores, sentimentos e discussões relacionadas com a aplicação.',
+            'Inquéritos e Questionários: Recolhi dados quantitativos em grande escala. Este método é útil para identificar padrões e priorizar esforços de otimização.',
+            'Análise de Concorrentes: Analisei as experiências dos utilizadores das aplicações dos concorrentes para melhores práticas, padrões da indústria e áreas onde a aplicação pode destacar-se ou melhorar.'
+          ],
+          researchQuestions: {
+            title: 'Questões de investigação',
+            categories: [
+              {
+                category: 'Experiência Geral',
+                questions: [
+                  'Com que frequência utiliza a aplicação Twitter?',
+                  'Quais são as principais razões para utilizar o Twitter?',
+                  'Quão satisfeito está com a experiência geral do utilizador da aplicação Twitter?'
+                ]
+              },
+              {
+                category: 'Usabilidade e Navegação',
+                questions: [
+                  'Quão fácil é navegar pelas diferentes secções da aplicação Twitter?',
+                  'Consegue encontrar facilmente as funcionalidades de que precisa na aplicação?',
+                  'Encontra alguma dificuldade ao realizar tarefas comuns, como compor tweets, retweetar ou procurar conteúdo?'
+                ]
+              },
+              {
+                category: 'Desempenho e Velocidade',
+                questions: [
+                  'Como classificaria o desempenho e a velocidade da aplicação Twitter (por exemplo, tempos de carregamento, responsividade)?',
+                  'Já teve problemas com falhas da aplicação, bloqueios ou tempos de carregamento lentos?'
+                ]
+              },
+              {
+                category: 'Satisfação com Funcionalidades',
+                questions: [
+                  'Quais funcionalidades da aplicação Twitter considera mais úteis e envolventes?',
+                  'Há alguma funcionalidade que gostaria que estivesse disponível ou melhorada na aplicação?',
+                  'Quão satisfeito está com a qualidade e funcionalidade dos anexos de media (imagens, vídeos, GIFs) nos tweets?'
+                ]
+              },
+              {
+                category: 'Notificações e Alertas',
+                questions: [
+                  'Como se sente em relação à frequência e relevância das notificações que recebe da aplicação Twitter?',
+                  'Considera as notificações úteis para se manter atualizado com conteúdo e atividades relevantes no Twitter?'
+                ]
+              },
+              {
+                category: 'Privacidade e Segurança',
+                questions: [
+                  'Quão confiante está nas medidas de privacidade e segurança implementadas pelo Twitter para proteger as suas informações pessoais e dados?',
+                  'Há alguma preocupação de privacidade ou funcionalidade que gostaria de ver melhorada para maior segurança?'
+                ]
+              },
+              {
+                category: 'Informação Demográfica',
+                questions: [
+                  'Qual é a sua faixa etária?',
+                  'Qual é o seu nível de educação?',
+                  'Qual é a sua ocupação?'
+                ]
+              }
+            ]
+          },
+          researchFindings: {
+            ageRange: {
+              title: 'Faixa Etária',
+              segments: [
+                { label: '18-25', value: 45, color: '#EF4444' },
+                { label: '26-35', value: 35, color: '#F97316' },
+                { label: '36 e acima', value: 20, color: '#3B82F6' }
+              ]
+            },
+            literacy: {
+              title: 'Literacia',
+              segments: [
+                { label: 'Acima da média', value: 50, color: '#EF4444' },
+                { label: 'Média', value: 35, color: '#F97316' },
+                { label: 'Abaixo da média', value: 15, color: '#3B82F6' }
+              ]
+            },
+            metrics: [
+              { label: 'Experiência Geral', value: 70 },
+              { label: 'Usabilidade e Navegação', value: 65 }
+            ],
+            priorityFeatures: {
+              title: 'Lista de funcionalidades baseada em prioridade',
+              features: [
+                { name: 'Coleção de Marcadores', priority: 100 },
+                { name: 'Votações Integradas', priority: 85 },
+                { name: 'Coleção de Media', priority: 75 },
+                { name: 'Editar Mensagem Privada', priority: 65 },
+                { name: 'Tradução de Idioma em Tempo Real', priority: 50 },
+                { name: 'Hashtags Preditivas', priority: 40 },
+                { name: 'Descrições de Imagem e Vídeo', priority: 30 },
+                { name: 'Análise de Sentimento Automatizada', priority: 20 }
+              ]
+            },
+            keyFeatures: {
+              title: 'Foco em funcionalidades principais',
+              features: [
+                {
+                  name: 'Coleção de Marcadores',
+                  description: 'Permitir que os utilizadores criem coleções de tweets marcados para melhor organização e referência.'
+                },
+                {
+                  name: 'Votações Integradas',
+                  description: 'Expandir a funcionalidade de votações para permitir que os utilizadores criem e participem em votações diretamente dentro de tweets e espaços.'
+                },
+                {
+                  name: 'Coleção de Media',
+                  description: 'Permitir que os utilizadores criem coleções de tweets marcados para melhor organização e referência.'
+                },
+                {
+                  name: 'Editar Mensagem Privada',
+                  description: 'Introduzir a capacidade de editar mensagens dentro de um curto período de tempo após o envio para corrigir erros ou atualizar informações.'
+                },
+                {
+                  name: 'Traduzir tweets',
+                  description: 'Traduzir publicações em tempo real'
+                }
+              ]
+            },
+            featureDetails: {
+              title: 'Detalhes das Funcionalidades',
+              features: [
+                {
+                  name: 'Coleção de Marcadores',
+                  description: 'Permitir que os utilizadores criem coleções de tweets marcados para melhor organização e referência.',
+                  image: '/images/projects/x-optimization/x-bookmark.webp'
+                },
+                {
+                  name: 'Votações Integradas',
+                  description: 'Expandir a funcionalidade de votações para permitir que os utilizadores criem e participem em votações diretamente dentro de tweets e espaços.',
+                  image: '/images/projects/x-optimization/x-polls.webp'
+                },
+                {
+                  name: 'Coleção de Media',
+                  description: 'Permitir que os utilizadores criem coleções de tweets marcados para melhor organização e referência.',
+                  image: '/images/projects/x-optimization/x-media.webp'
+                },
+                {
+                  name: 'Editar Mensagem Privada',
+                  description: 'Introduzir a capacidade de editar mensagens dentro de um curto período de tempo após o envio para corrigir erros ou atualizar informações.',
+                  image: '/images/projects/x-optimization/x-private-message.webp'
+                },
+                {
+                  name: 'Traduzir tweets',
+                  description: 'Traduzir publicações em tempo real',
+                  image: '/images/projects/x-optimization/x-translate.webp'
+                }
+              ]
+            }
+          }
+        }
+      }
     }
   },
   'interior-design': {
@@ -1478,6 +1842,251 @@ export default function ProjectPage({ params }: Params) {
                              </div>
                            ))}
                          </div>
+                       </div>
+                     )}
+                     {sectionContent?.researchQuestions && (
+                       <div className="pt-8 md:pt-[42px]">
+                         <h3 className="mb-6 text-base md:text-2xl font-medium text-foreground">
+                           {sectionContent.researchQuestions.title}
+                         </h3>
+                         <div className="space-y-6">
+                           {sectionContent.researchQuestions.categories.map((category: any, catIndex: number) => (
+                             <div key={catIndex} className="space-y-3">
+                               <h4 className="text-sm md:text-lg font-medium text-foreground">
+                                 {category.category}
+                               </h4>
+                               <ul className="space-y-2 ml-4">
+                                 {category.questions.map((question: string, qIndex: number) => (
+                                   <li key={qIndex} className="text-xs md:text-base text-brand-shadow leading-[200%] flex items-start gap-2">
+                                     <span className="text-foreground mt-1">•</span>
+                                     <span>{question}</span>
+                                   </li>
+                                 ))}
+                               </ul>
+                             </div>
+                           ))}
+                         </div>
+                       </div>
+                     )}
+                     {sectionContent?.researchFindings && (
+                       <div className="pt-8 md:pt-[42px]">
+                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-8">
+                           {/* Age Range Donut Chart */}
+                           {sectionContent.researchFindings.ageRange && (
+                             <div className="space-y-4">
+                               <h4 className="text-sm md:text-base font-medium text-foreground">
+                                 {sectionContent.researchFindings.ageRange.title}
+                               </h4>
+                               <div className="flex items-center justify-center">
+                                 <div className="relative w-32 h-32 md:w-40 md:h-40">
+                                   <svg className="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
+                                     <circle
+                                       cx="50"
+                                       cy="50"
+                                       r="40"
+                                       fill="none"
+                                       stroke="#1F2937"
+                                       strokeWidth="8"
+                                     />
+                                     {sectionContent.researchFindings.ageRange.segments.map((segment: any, index: number, array: any[]) => {
+                                       const total = array.reduce((sum, s) => sum + s.value, 0);
+                                       const percentage = segment.value / total;
+                                       const offset = array.slice(0, index).reduce((sum, s) => sum + (s.value / total), 0);
+                                       const circumference = 2 * Math.PI * 40;
+                                       const strokeDasharray = `${circumference * percentage} ${circumference}`;
+                                       const strokeDashoffset = -circumference * offset;
+                                       
+                                       return (
+                                         <circle
+                                           key={index}
+                                           cx="50"
+                                           cy="50"
+                                           r="40"
+                                           fill="none"
+                                           stroke={segment.color}
+                                           strokeWidth="8"
+                                           strokeDasharray={strokeDasharray}
+                                           strokeDashoffset={strokeDashoffset}
+                                         />
+                                       );
+                                     })}
+                                   </svg>
+                                   <div className="absolute inset-0 flex items-center justify-center">
+                                     <div className="text-center">
+                                       <div className="text-xs md:text-sm text-brand-shadow">Total</div>
+                                     </div>
+                                   </div>
+                                 </div>
+                               </div>
+                               <div className="space-y-2">
+                                 {sectionContent.researchFindings.ageRange.segments.map((segment: any, index: number) => (
+                                   <div key={index} className="flex items-center gap-2">
+                                     <div className="w-4 h-4 rounded-full" style={{ backgroundColor: segment.color }} />
+                                     <span className="text-xs md:text-sm text-brand-shadow">{segment.label}: {segment.value}%</span>
+                                   </div>
+                                 ))}
+                               </div>
+                             </div>
+                           )}
+                           
+                           {/* Literacy Donut Chart */}
+                           {sectionContent.researchFindings.literacy && (
+                             <div className="space-y-4">
+                               <h4 className="text-sm md:text-base font-medium text-foreground">
+                                 {sectionContent.researchFindings.literacy.title}
+                               </h4>
+                               <div className="flex items-center justify-center">
+                                 <div className="relative w-32 h-32 md:w-40 md:h-40">
+                                   <svg className="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
+                                     <circle
+                                       cx="50"
+                                       cy="50"
+                                       r="40"
+                                       fill="none"
+                                       stroke="#1F2937"
+                                       strokeWidth="8"
+                                     />
+                                     {sectionContent.researchFindings.literacy.segments.map((segment: any, index: number, array: any[]) => {
+                                       const total = array.reduce((sum, s) => sum + s.value, 0);
+                                       const percentage = segment.value / total;
+                                       const offset = array.slice(0, index).reduce((sum, s) => sum + (s.value / total), 0);
+                                       const circumference = 2 * Math.PI * 40;
+                                       const strokeDasharray = `${circumference * percentage} ${circumference}`;
+                                       const strokeDashoffset = -circumference * offset;
+                                       
+                                       return (
+                                         <circle
+                                           key={index}
+                                           cx="50"
+                                           cy="50"
+                                           r="40"
+                                           fill="none"
+                                           stroke={segment.color}
+                                           strokeWidth="8"
+                                           strokeDasharray={strokeDasharray}
+                                           strokeDashoffset={strokeDashoffset}
+                                         />
+                                       );
+                                     })}
+                                   </svg>
+                                   <div className="absolute inset-0 flex items-center justify-center">
+                                     <div className="text-center">
+                                       <div className="text-xs md:text-sm text-brand-shadow">Total</div>
+                                     </div>
+                                   </div>
+                                 </div>
+                               </div>
+                               <div className="space-y-2">
+                                 {sectionContent.researchFindings.literacy.segments.map((segment: any, index: number) => (
+                                   <div key={index} className="flex items-center gap-2">
+                                     <div className="w-4 h-4 rounded-full" style={{ backgroundColor: segment.color }} />
+                                     <span className="text-xs md:text-sm text-brand-shadow">{segment.label}: {segment.value}%</span>
+                                   </div>
+                                 ))}
+                               </div>
+                             </div>
+                           )}
+                           
+                           {/* Metrics */}
+                           {sectionContent.researchFindings.metrics && (
+                             <>
+                               {sectionContent.researchFindings.metrics.map((metric: any, index: number) => (
+                                 <div key={index} className="space-y-2">
+                                   <h4 className="text-sm md:text-base font-medium text-foreground">
+                                     {metric.label}
+                                   </h4>
+                                   <div className="text-3xl md:text-5xl font-bold text-foreground">
+                                     {metric.value}%
+                                   </div>
+                                 </div>
+                               ))}
+                             </>
+                           )}
+                         </div>
+                         
+                         {/* Priority Features */}
+                         {sectionContent.researchFindings.priorityFeatures && (
+                           <div className="mt-8 space-y-4">
+                             <h4 className="text-sm md:text-base font-medium text-foreground">
+                               {sectionContent.researchFindings.priorityFeatures.title}
+                             </h4>
+                             <div className="space-y-3">
+                               {sectionContent.researchFindings.priorityFeatures.features.map((feature: any, index: number) => (
+                                 <div key={index} className="space-y-1">
+                                   <div className="flex justify-between items-center">
+                                     <span className="text-xs md:text-sm text-brand-shadow">{feature.name}</span>
+                                   </div>
+                                   <div className="w-full bg-brand-grey rounded-full h-2 md:h-3">
+                                     <div
+                                       className="h-full rounded-full bg-foreground transition-all"
+                                       style={{ width: `${feature.priority}%` }}
+                                     />
+                                   </div>
+                                 </div>
+                               ))}
+                             </div>
+                           </div>
+                         )}
+                         
+                         {/* Key Features */}
+                         {sectionContent.researchFindings.keyFeatures && (
+                           <div className="mt-8 space-y-4">
+                             <h4 className="text-sm md:text-base font-medium text-foreground">
+                               {sectionContent.researchFindings.keyFeatures.title}
+                             </h4>
+                             <div className="space-y-4">
+                               {sectionContent.researchFindings.keyFeatures.features.map((feature: any, index: number) => (
+                                 <div key={index} className="flex items-start gap-3">
+                                   <svg className="w-5 h-5 text-foreground mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                                   </svg>
+                                   <div className="flex-1">
+                                     <h5 className="text-xs md:text-sm font-medium text-foreground mb-1">
+                                       {feature.name}
+                                     </h5>
+                                     <p className="text-xs md:text-sm text-brand-shadow leading-[200%]">
+                                       {feature.description}
+                                     </p>
+                                   </div>
+                                 </div>
+                               ))}
+                             </div>
+                           </div>
+                         )}
+                         
+                         {/* Feature Details */}
+                         {sectionContent.researchFindings.featureDetails && (
+                           <div className="mt-8 space-y-8">
+                             <h4 className="text-sm md:text-base font-medium text-foreground">
+                               {sectionContent.researchFindings.featureDetails.title}
+                             </h4>
+                             <div className="space-y-12">
+                               {sectionContent.researchFindings.featureDetails.features.map((feature: any, index: number) => (
+                                 <div key={index} className="space-y-4">
+                                   <div>
+                                     <h5 className="text-xs md:text-base font-medium text-foreground mb-2">
+                                       {feature.name}
+                                     </h5>
+                                     <p className="text-xs md:text-sm text-brand-shadow leading-[200%]">
+                                       {feature.description}
+                                     </p>
+                                   </div>
+                                   {feature.image && (
+                                     <div className="pt-4">
+                                       <Image
+                                         src={feature.image}
+                                         alt={feature.name}
+                                         width={1200}
+                                         height={800}
+                                         className="w-full h-auto rounded-lg"
+                                       />
+                                     </div>
+                                   )}
+                                 </div>
+                               ))}
+                             </div>
+                           </div>
+                         )}
                        </div>
                      )}
                      {sectionContent?.generalPlanning && (
