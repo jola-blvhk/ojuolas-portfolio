@@ -7,6 +7,33 @@
   "tabs.resume": "Currículo",
   "tabs.linkedin": "LinkedIn",
   "tabs.behance": "Behance",
+  "aboutMe": {
+    "paragraph1": "Sou uma designer e investigadora multidisciplinar focada na criação de produtos e experiências digitais significativos. Também sou uma Product Manager certificada.",
+    "paragraph2": "Como designer com um background e diploma em arquitetura e mestrado em Design e Cultura Visual na IADE Creative University Lisboa, Portugal, trago uma perspetiva única e um conjunto de competências para este papel, com um conjunto diversificado de competências que inclui modelação 3D, investigação de utilizadores, design de interação, design de UI e animação. O meu background em arquitetura deu-me um olhar apurado para o design e uma apreciação pela importância da experiência do utilizador. Através da minha experiência, sou capaz de criar interfaces de utilizador visualmente impressionantes e imersivas que melhoram a experiência geral do utilizador.",
+    "paragraph3": "A minha experiência em investigação de utilizadores permite-me compreender o comportamento do utilizador e criar interfaces que são intuitivas e fáceis de usar. Além disso, posso construir interfaces de utilizador dinâmicas e cativantes que são tanto esteticamente belas quanto simples de usar.",
+    "paragraph4": "Por último, mas não menos importante, o meu background em animação adiciona um nível adicional de interação e envolvimento, dando vida aos conceitos e criando uma experiência de utilizador mais envolvente. Comprovei ao longo da minha carreira que posso colaborar com equipas multifuncionais para criar soluções de design criativas e eficientes que servem os objetivos organizacionais. Estou dedicada a manter-me atualizada com as abordagens e tendências de design mais recentes, e procuro constantemente formas de aperfeiçoar as minhas capacidades."
+  },
+  "skills": {
+    "title": "Competências",
+    "items": [
+      { "name": "Figma", "icon": "/images/skills/devicon_figma.svg" },
+      { "name": "Spline", "icon": "/images/skills/spline.svg" },
+      { "name": "Blender", "icon": "/images/skills/vscode-icons_file-type-blender.svg" },
+      { "name": "Adobe XD", "icon": "/images/skills/devicon_xd.svg" },
+      { "name": "Adobe PS", "icon": "/images/skills/devicon_photoshop.svg" },
+      { "name": "Adobe AI", "icon": "/images/skills/adobe-ai.svg" },
+      { "name": "Adobe ID", "icon": "/images/skills/logos_adobe-indesign.svg" },
+      { "name": "Framer", "icon": "/images/skills/framer.svg" },
+      { "name": "Webflow", "icon": "/images/skills/webflow.svg" },
+      { "name": "Ilustração 3d", "icon": null },
+      { "name": "Investigação e testes de utilizadores", "icon": null },
+      { "name": "Animação", "icon": null },
+      { "name": "Design Thinking e Resolução de Problemas", "icon": null },
+      { "name": "Motion Design", "icon": null },
+      { "name": "Design de Interação", "icon": null },
+      { "name": "Wireframing e Prototipagem", "icon": null }
+    ]
+  },
   "projects": [
     {
       "title": "Ark Software",

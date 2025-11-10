@@ -17,10 +17,29 @@ type Project = {
   slug: string;
 };
 
+type AboutMe = {
+  paragraph1: string;
+  paragraph2: string;
+  paragraph3: string;
+  paragraph4?: string;
+};
+
+type Skill = {
+  name: string;
+  icon: string | null;
+};
+
+type Skills = {
+  title: string;
+  items: Skill[];
+};
+
 type TabbedContentProps = {
   links: TabItem[];
   projects: Project[];
   locale: string;
+  aboutMe?: AboutMe;
+  skills?: Skills;
 };
 
 const renderWithHighlights = (text: string) => {
@@ -58,7 +77,7 @@ const threeDImages = [
   '/images/3d-world/seventeen.webp',
 ];
 
-export default function TabbedContent({ links, projects, locale }: TabbedContentProps) {
+export default function TabbedContent({ links, projects, locale, aboutMe, skills }: TabbedContentProps) {
   const [activeTabIndex, setActiveTabIndex] = useState(0);
 
   const handleTabChange = (index: number) => {
@@ -114,6 +133,45 @@ export default function TabbedContent({ links, projects, locale }: TabbedContent
               />
             </div>
           ))}
+        </div>
+      )}
+
+      {/* About Me Tab Content */}
+      {activeTabIndex === 2 && aboutMe && (
+        <div className="mt-2 space-y-6 md:space-y-8">
+          <div className="space-y-4 md:space-y-6 text-brand-shadow text-xs leading-[200%] md:text-base">
+            <p>{aboutMe.paragraph1}</p>
+            <p>{aboutMe.paragraph2}</p>
+            <p>{aboutMe.paragraph3}</p>
+            {aboutMe.paragraph4 && <p>{aboutMe.paragraph4}</p>}
+          </div>
+          
+          {skills && (
+            <div className="space-y-4 md:space-y-6 md:w-[70%]">
+              <h3 className="text-base md:text-xl font-medium text-foreground">
+                {skills.title}
+              </h3>
+              <div className="flex flex-wrap gap-y-3 gap-x-2">
+                {skills.items.map((skill, index) => (
+                  <div
+                    key={index}
+                    className="flex items-center w-fit py-1 text-[13px] md:text-sm rounded-2xl border border-brand-grey  px-3"
+                  >
+                    {skill.icon && (
+                      <Image
+                        src={skill.icon}
+                        alt={skill.name}
+                        width={14}
+                        height={14}
+                        className="w-5 h-5 mr-2"
+                      />
+                    )}
+                    <span>{skill.name}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       )}
     </section>

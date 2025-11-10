@@ -7,6 +7,33 @@
   "tabs.resume": "Resume",
   "tabs.linkedin": "Linkedin",
   "tabs.behance": "Behance",
+  "aboutMe": {
+    "paragraph1": "I am a multidisciplinary designer and researcher focused on building meaningful digital products and experiences. i am also a certified Product manager.",
+    "paragraph2": "As a designer with a background and degree in architecture and masters in Design and Visual culture at IADE Creative University Lisbon, Portugal, I bring a unique perspective and skill set to this role, with a diverse set of skills that includes 3D modeling, user research, interaction design, UI design, and animation. My background in architecture has given me a keen eye for design and an appreciation for the importance of user experience. Through my experience, I am able to create visually stunning and immersive user interfaces that enhance the overall user experience.",
+    "paragraph3": "My expertise in user research allows me to understand user behavior and design interfaces that are intuitive and easy to use. Additionally, I can build dynamic, captivating user interfaces that are both aesthetically beautiful and simple to use.",
+    "paragraph4": "Last but not least, my background in animation adds an additional level of interaction and engagement, bringing concepts to life and creating a more engaging user experience. I have proven over my career that I can collaborate with crossfunctional teams to create creative and efficient design solutions that serve organizational goals. I'm dedicated to keeping up with the most recent design approaches and trends, and I'm constantly seeking for ways to sharpen my abilities."
+  },
+  "skills": {
+    "title": "Skills",
+    "items": [
+      { "name": "Figma", "icon": "/images/skills/devicon_figma.svg" },
+      { "name": "Spline", "icon": "/images/skills/spline.svg" },
+      { "name": "Blender", "icon": "/images/skills/vscode-icons_file-type-blender.svg" },
+      { "name": "Adobe XD", "icon": "/images/skills/devicon_xd.svg" },
+      { "name": "Adobe PS", "icon": "/images/skills/devicon_photoshop.svg" },
+      { "name": "Adobe AI", "icon": "/images/skills/adobe-ai.svg" },
+      { "name": "Adobe ID", "icon": "/images/skills/logos_adobe-indesign.svg" },
+      { "name": "Framer", "icon": "/images/skills/framer.svg" },
+      { "name": "Webflow", "icon": "/images/skills/webflow.svg" },
+      { "name": "3d illustration", "icon": null },
+      { "name": "User research and testing", "icon": null },
+      { "name": "Animation", "icon": null },
+      { "name": "Design Thinking & Problem-Solving", "icon": null },
+      { "name": "Motion Design", "icon": null },
+      { "name": "Interaction Design", "icon": null },
+      { "name": "Wireframing & Prototyping", "icon": null }
+    ]
+  },
   "projects": [
     {
       "title": "Ark Software",

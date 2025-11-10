@@ -31,6 +31,8 @@ export default async function LocalizedHome({ params }: Params) {
     { title: t['tabs.behance'] },
   ];
   const projects = (t.projects ?? []) as { title: string; description: string; image: string; slug: string }[];
+  const aboutMe = t.aboutMe as { paragraph1: string; paragraph2: string; paragraph3: string; paragraph4?: string } | undefined;
+  const skills = t.skills as { title: string; items: Array<{ name: string; icon: string | null }> } | undefined;
   
   // Debug: log projects to see if slugs are loaded
   console.log('Projects loaded:', projects);
@@ -90,6 +92,8 @@ export default async function LocalizedHome({ params }: Params) {
         links={links}
         projects={projects}
         locale={locale}
+        aboutMe={aboutMe}
+        skills={skills}
       />
     </main>
   );
