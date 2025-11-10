@@ -95,19 +95,22 @@
       "title": "Interior Design Portfolio",
       "description": "A **one stop market place** for all things furniture, accessories and more.",
       "image": "/images/projects/interior-design/interior-design.webp",
-      "slug": "interior-design"
+      "slug": "interior-design",
+      "externalUrl": "https://lavender-version-039344.framer.app/"
     },
     {
       "title": "Portfolio Website",
       "description": "**Personality in Design**, A functional portfolio for a front end developer with a big personality.",
       "image": "/images/projects/portfolio-website/portfolio-website.webp",
-      "slug": "portfolio-website"
+      "slug": "portfolio-website",
+      "externalUrl": "https://codewithjojo.vercel.app/"
     },
     {
       "title": "Becomy",
       "description": "**A saas e-commerce platform**, 5 minutes to create your site 100% customizable, optimized for conversion and without commission.",
       "image": "/images/projects/becomy/becomy.webp",
-      "slug": "becomy"
+      "slug": "becomy",
+      "externalUrl": "https://becomy.com/"
     }
   ]
 }

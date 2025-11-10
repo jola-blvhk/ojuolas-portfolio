@@ -23,24 +23,40 @@ export default function TabsList({ items, initialActiveIndex = 0, activeIndex: c
       <ul className="flex w-max  items-center gap-6 whitespace-nowrap border-b border-brand-grey text-xs text-brand-shadow md:text-base">
         {items.map((item, index) => {
           const isActive = index === activeIndex;
+          const hasHref = !!item.href;
+          
           return (
             <li key={item.title} className="relative">
-              <button
-                type="button"
-                className={
-                  "pb-1.5 px-[10px] pt-[10px] leading-[200%]  transition-colors" +
-                  (isActive ? " text-foreground font-medium" : " hover:font-medium hover:text-foreground")
-                }
-                onClick={() => {
-                  if (controlledActiveIndex === undefined) {
-                    setInternalActiveIndex(index);
+              {hasHref ? (
+                <a
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={
+                    "pb-1.5 px-[10px] pt-[10px] leading-[200%] transition-colors inline-block" +
+                    (isActive ? " text-foreground font-medium" : " hover:font-medium hover:text-foreground")
                   }
-                  onChange?.(index, item);
-                }}
-              >
-                {item.title}
-              </button>
-              {isActive ? (
+                >
+                  {item.title}
+                </a>
+              ) : (
+                <button
+                  type="button"
+                  className={
+                    "pb-1.5 px-[10px] pt-[10px] leading-[200%]  transition-colors" +
+                    (isActive ? " text-foreground font-medium" : " hover:font-medium hover:text-foreground")
+                  }
+                  onClick={() => {
+                    if (controlledActiveIndex === undefined) {
+                      setInternalActiveIndex(index);
+                    }
+                    onChange?.(index, item);
+                  }}
+                >
+                  {item.title}
+                </button>
+              )}
+              {isActive && !hasHref ? (
                 <div className="pointer-events-none absolute bottom-[-1px] left-1/2 h-[1px] w-[65px] -translate-x-1/2 rounded-full bg-foreground" />
               ) : null}
             </li>

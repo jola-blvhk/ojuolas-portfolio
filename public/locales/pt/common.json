@@ -95,19 +95,22 @@
       "title": "Portefólio de Design de Interiores",
       "description": "Um **mercado único** para tudo o que é mobiliário, acessórios e mais.",
       "image": "/images/projects/interior-design/interior-design.webp",
-      "slug": "interior-design"
+      "slug": "interior-design",
+      "externalUrl": "https://lavender-version-039344.framer.app/"
     },
     {
       "title": "Website de Portefólio",
       "description": "**Personalidade no Design**, um portefólio funcional para um desenvolvedor front‑end com grande personalidade.",
       "image": "/images/projects/portfolio-website/portfolio-website.webp",
-      "slug": "portfolio-website"
+      "slug": "portfolio-website",
+      "externalUrl": "https://codewithjojo.vercel.app/"
     },
     {
       "title": "Becomy",
       "description": "**Uma plataforma SaaS de e‑commerce**, 5 minutos para criar o seu site 100% personalizável, otimizado para conversão e sem comissão.",
       "image": "/images/projects/becomy/becomy.webp",
-      "slug": "becomy"
+      "slug": "becomy",
+      "externalUrl": "https://becomy.com/"
     }
   ]
 }

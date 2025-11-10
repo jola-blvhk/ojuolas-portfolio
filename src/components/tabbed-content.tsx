@@ -15,6 +15,7 @@ type Project = {
   description: string;
   image: string;
   slug: string;
+  externalUrl?: string;
 };
 
 type AboutMe = {
@@ -118,25 +119,42 @@ export default function TabbedContent({ links, projects, locale, aboutMe, skills
         <div className="mt-2 grid grid-cols-1 gap-x-2 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => {
             const slug = project.slug || project.title.toLowerCase().replace(/\s+/g, '-');
+            const projectContent = (
+              <article className="group cursor-pointer">
+                <div className="relative w-full h-[291px] md:h-[366px] dash-border border border-brand-grey dark:border-[#6F6F6F4D] transform-gpu transition-transform duration-300 group-hover:-rotate-4">
+                  <Image 
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                    className="object-contain max-h-[80%] max-w-[97%] m-auto transition-transform duration-300"
+                  />
+                </div>
+                <h3 className="mt-2 leading-[200%] font-medium md:font-semibold font-montserrat text-foreground text-base">
+                  {project.title}
+                </h3>
+                <p className="text-brand-shadow mt-2 md:mt-3 text-xs leading-[200%] md:text-sm">
+                  {renderWithHighlights(project.description)}
+                </p>
+              </article>
+            );
+
+            if (project.externalUrl) {
+              return (
+                <a
+                  key={project.title}
+                  href={project.externalUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {projectContent}
+                </a>
+              );
+            }
+
             return (
               <Link key={project.title} href={`/${locale}/projects/${slug}`}>
-                <article className="group cursor-pointer">
-                  <div className="relative w-full h-[291px] md:h-[366px] dash-border border border-brand-grey dark:border-[#6F6F6F4D] transform-gpu transition-transform duration-300 group-hover:-rotate-4">
-                    <Image 
-                      src={project.image}
-                      alt={project.title}
-                      fill
-                      sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
-                      className="object-contain max-h-[80%] max-w-[97%] m-auto transition-transform duration-300"
-                    />
-                  </div>
-                  <h3 className="mt-2 leading-[200%] font-medium md:font-semibold font-montserrat text-foreground text-base">
-                    {project.title}
-                  </h3>
-                  <p className="text-brand-shadow mt-2 md:mt-3 text-xs leading-[200%] md:text-sm">
-                    {renderWithHighlights(project.description)}
-                  </p>
-                </article>
+                {projectContent}
               </Link>
             );
           })}
