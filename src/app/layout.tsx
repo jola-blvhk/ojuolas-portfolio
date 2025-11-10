@@ -20,9 +20,14 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Hi, I’m Ojuola 🧚🏾‍♀",
+  title: "Hi, I'm Ojuola 🧚🏾‍♀",
   description:
-    "I'm a UX/UI Designer with 4 years of Technical Support experience, blending problem-solving and user-focused design. Outside of Design, I enjoy cooking, working out, and making 3D seal characters ",
+    "I'm a UX/UI Designer with 4 years of Technical Support experience, blending problem-solving and user-focused design. Outside of Design, I enjoy cooking, working out, and making 3D seal characters ",
+  icons: {
+    icon: '/logo.ico',
+    shortcut: '/logo.ico',
+    apple: '/logo.ico',
+  },
 };
 
 export default async function RootLayout({
