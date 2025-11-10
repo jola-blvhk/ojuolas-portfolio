@@ -33,6 +33,8 @@ export default async function LocalizedHome({ params }: Params) {
   const projects = (t.projects ?? []) as { title: string; description: string; image: string; slug: string }[];
   const aboutMe = t.aboutMe as { paragraph1: string; paragraph2: string; paragraph3: string; paragraph4?: string } | undefined;
   const skills = t.skills as { title: string; items: Array<{ name: string; icon: string | null }> } | undefined;
+  const certifications = t.certifications as { title: string; items: Array<{ name: string; description: string; date: string; image: string }> } | undefined;
+  const random = t.random as { title: string; items: Array<{ type: string; src: string; alt: string }> } | undefined;
   
   // Debug: log projects to see if slugs are loaded
   console.log('Projects loaded:', projects);
@@ -94,6 +96,8 @@ export default async function LocalizedHome({ params }: Params) {
         locale={locale}
         aboutMe={aboutMe}
         skills={skills}
+        certifications={certifications}
+        random={random}
       />
     </main>
   );

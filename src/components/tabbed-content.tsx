@@ -34,12 +34,37 @@ type Skills = {
   items: Skill[];
 };
 
+type Certification = {
+  name: string;
+  description: string;
+  date: string;
+  image: string;
+};
+
+type Certifications = {
+  title: string;
+  items: Certification[];
+};
+
+type RandomItem = {
+  type: string;
+  src: string;
+  alt: string;
+};
+
+type Random = {
+  title: string;
+  items: RandomItem[];
+};
+
 type TabbedContentProps = {
   links: TabItem[];
   projects: Project[];
   locale: string;
   aboutMe?: AboutMe;
   skills?: Skills;
+  certifications?: Certifications;
+  random?: Random;
 };
 
 const renderWithHighlights = (text: string) => {
@@ -77,7 +102,7 @@ const threeDImages = [
   '/images/3d-world/seventeen.webp',
 ];
 
-export default function TabbedContent({ links, projects, locale, aboutMe, skills }: TabbedContentProps) {
+export default function TabbedContent({ links, projects, locale, aboutMe, skills, certifications, random }: TabbedContentProps) {
   const [activeTabIndex, setActiveTabIndex] = useState(0);
 
   const handleTabChange = (index: number) => {
@@ -167,6 +192,75 @@ export default function TabbedContent({ links, projects, locale, aboutMe, skills
                       />
                     )}
                     <span>{skill.name}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {certifications && (
+            <div className="space-y-4 md:space-y-6 md:w-[70%]">
+              <h3 className="text-base md:text-xl font-medium text-foreground">
+                {certifications.title}
+              </h3>
+              <div className="space-y-6">
+                {certifications.items.map((cert, index) => (
+                  <div key={index} className="space-y-3">
+                    <div>
+                      <h4 className="text-sm md:text-base font-medium text-foreground mb-1">
+                        {cert.name}
+                      </h4>
+                      <p className="text-xs md:text-sm text-brand-shadow mb-1">
+                        {cert.description}
+                      </p>
+                      <p className="text-xs md:text-sm text-brand-shadow">
+                        {cert.date}
+                      </p>
+                    </div>
+                    {cert.image && (
+                      <div className="pt-2">
+                        <Image
+                          src={cert.image}
+                          alt={cert.name}
+                          width={1200}
+                          height={800}
+                          className="w-full h-auto rounded-lg"
+                        />
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {random && (
+            <div className="space-y-4 md:space-y-6">
+              <h3 className="text-base md:text-xl font-medium text-foreground">
+                {random.title}
+              </h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+                {random.items.map((item, index) => (
+                  <div key={index} className="relative w-full">
+                    {item.type === 'image' ? (
+                      <Image
+                        src={item.src}
+                        alt={item.alt}
+                        width={800}
+                        height={800}
+                        sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                        className="w-full h-auto rounded-lg"
+                      />
+                    ) : (
+                      <video
+                        src={item.src}
+                        controls
+                        className="w-full h-auto rounded-lg"
+                        aria-label={item.alt}
+                      >
+                        Your browser does not support the video tag.
+                      </video>
+                    )}
                   </div>
                 ))}
               </div>

@@ -4,6 +4,7 @@
   "tabs.projects": "Projects",
   "tabs.3d": "3D World",
   "tabs.about": "About me",
+  "tabs.random": "Random",
   "tabs.resume": "Resume",
   "tabs.linkedin": "Linkedin",
   "tabs.behance": "Behance",
@@ -32,6 +33,37 @@
       { "name": "Motion Design", "icon": null },
       { "name": "Interaction Design", "icon": null },
       { "name": "Wireframing & Prototyping", "icon": null }
+    ]
+  },
+  "certifications": {
+    "title": "Certifications",
+    "items": [
+      {
+        "name": "Product Management - Women Techsters Fellowship Program",
+        "description": "6 months intensive training in Product Management learning track",
+        "date": "09 MARCH 2023",
+        "image": "/images/certification/women-techsters.webp"
+      }
+    ]
+  },
+  "random": {
+    "title": "Randoms",
+    "items": [
+      {
+        "type": "image",
+        "src": "/images/randoms/1.jpg",
+        "alt": "Random image 1"
+      },
+      {
+        "type": "video",
+        "src": "/images/randoms/2.mp4",
+        "alt": "Random video 1"
+      },
+      {
+        "type": "video",
+        "src": "/images/randoms/3.mp4",
+        "alt": "Random video 2"
+      }
     ]
   },
   "projects": [
