@@ -35,7 +35,7 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const hdrs = await headers();
+  const hdrs = await headers()
   const headerLocale = hdrs.get('x-next-locale') || 'en';
   return (
     <html lang={headerLocale} suppressHydrationWarning>
