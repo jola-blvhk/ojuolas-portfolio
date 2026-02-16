@@ -23,12 +23,12 @@ export default async function LocalizedHome({ params }: Params) {
   const content = await fs.readFile(filePath, 'utf8');
   const t = JSON.parse(content) as any;
   const links = [
-    { title: t['tabs.projects'] },
-    { title: t['tabs.3d'] },
-    { title: t['tabs.about'] },
-    { title: t['tabs.resume'], href: 'https://drive.google.com/file/d/134DJ7dBBGusnaeYbpkJDZtnXC0trlsrT/view' },
-    { title: t['tabs.linkedin'], href: 'https://www.linkedin.com/in/bello-ojuolape?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app' },
-    { title: t['tabs.behance'], href: 'https://www.behance.net/ojuolapebello' },
+    { key: 'projects', title: t['tabs.projects'] },
+    { key: 'about', title: t['tabs.about'] },
+    { key: 'resume', title: t['tabs.resume'], href: 'https://drive.google.com/file/d/1mrdBqj6bS7E6lgxfOwAKANE_2MnVbGgV/view?usp=sharing' },
+    { key: 'linkedin', title: t['tabs.linkedin'], href: 'https://www.linkedin.com/in/bello-ojuolape?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app' },
+    { key: 'behance', title: t['tabs.behance'], href: 'https://www.behance.net/ojuolapebello' },
+    { key: '3d', title: t['tabs.3d'] },
   ];
   const projects = (t.projects ?? []) as { title: string; description: string; image: string; slug: string; externalUrl?: string }[];
   const aboutMe = t.aboutMe as { paragraph1: string; paragraph2: string; paragraph3: string; paragraph4?: string } | undefined;

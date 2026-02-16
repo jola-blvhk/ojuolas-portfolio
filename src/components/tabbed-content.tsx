@@ -6,6 +6,7 @@ import { useState } from 'react';
 import TabsList from '@/components/tabs-list';
 
 type TabItem = {
+  key?: string;
   title: string;
   href?: string;
 };
@@ -68,6 +69,22 @@ type TabbedContentProps = {
   random?: Random;
 };
 
+const renderWithLineBreaks = (text: string) => {
+  return text.split('\n').map((line, idx) => {
+    if (line.trim() === '') {
+      return null;
+    }
+    if (line.match(/^Why|^[\d•]/)) {
+      return (
+        <div key={idx} className={line.match(/^[\d•]/) ? 'ml-4' : ''}>
+          {line}
+        </div>
+      );
+    }
+    return <span key={idx}>{line}</span>;
+  });
+};
+
 const renderWithHighlights = (text: string) => {
   return text.split(/(\*\*[^*]+\*\*)/g).map((part, idx) => {
     if (part.startsWith('**') && part.endsWith('**')) {
@@ -103,19 +120,21 @@ const threeDImages = [
   '/images/3d-world/seventeen.webp',
 ];
 
-export default function TabbedContent({ links, projects, locale, aboutMe, skills, certifications, random }: TabbedContentProps) {
+export default function afTabbedContent({ links, projects, locale, aboutMe, skills, certifications, random }: TabbedContentProps) {
   const [activeTabIndex, setActiveTabIndex] = useState(0);
 
   const handleTabChange = (index: number) => {
     setActiveTabIndex(index);
   };
 
+  const activeKey = links[activeTabIndex]?.key;
+
   return (
     <section className="mt-8 md:mt-10">
       <TabsList items={links} activeIndex={activeTabIndex} onChange={handleTabChange} />
       
       {/* Projects Tab Content */}
-      {activeTabIndex === 0 && (
+      {activeKey === 'projects' && (
         <div className="mt-2 grid grid-cols-1 gap-x-2 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => {
             const slug = project.slug || project.title.toLowerCase().replace(/\s+/g, '-');
@@ -162,7 +181,7 @@ export default function TabbedContent({ links, projects, locale, aboutMe, skills
       )}
 
       {/* 3D World Tab Content */}
-      {activeTabIndex === 1 && (
+      {activeKey === '3d' && (
         <div className="mt-2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           {threeDImages.map((imagePath, index) => (
             <div key={index} className="relative w-full">
@@ -180,13 +199,13 @@ export default function TabbedContent({ links, projects, locale, aboutMe, skills
       )}
 
       {/* About Me Tab Content */}
-      {activeTabIndex === 2 && aboutMe && (
+      {activeKey === 'about' && aboutMe && (
         <div className="mt-2 space-y-6 md:space-y-8">
           <div className="space-y-4 md:space-y-6 text-brand-shadow text-xs leading-[200%] md:text-base">
-            <p>{aboutMe.paragraph1}</p>
-            <p>{aboutMe.paragraph2}</p>
-            <p>{aboutMe.paragraph3}</p>
-            {aboutMe.paragraph4 && <p>{aboutMe.paragraph4}</p>}
+            <div>{renderWithLineBreaks(aboutMe.paragraph1)}</div>
+            <div>{renderWithLineBreaks(aboutMe.paragraph2)}</div>
+            <div>{renderWithLineBreaks(aboutMe.paragraph3)}</div>
+            {aboutMe.paragraph4 && <div>{renderWithLineBreaks(aboutMe.paragraph4)}</div>}
           </div>
           
           {skills && (
