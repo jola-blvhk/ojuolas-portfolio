@@ -39,6 +39,23 @@ export default async function RootLayout({
   const headerLocale = hdrs.get('x-next-locale') || 'en';
   return (
     <html lang={headerLocale} suppressHydrationWarning>
+      <head>
+        {/* Google tag (gtag.js) */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-HPKEBZ1SR8"
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-HPKEBZ1SR8');
+            `,
+          }}
+        />
+      </head>
       <body
         className={`${poppins.variable} ${montserrat.variable} mx-auto max-w-[1440px] antialiased`}
       >
