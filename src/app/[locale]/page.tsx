@@ -4,15 +4,16 @@ import path from 'node:path';
 import TabbedContent from '@/components/tabbed-content';
 
 type Params = {
-  params: {
+  params: Promise<{
     locale: string;
-  };
+  }>;
 };
 
 // Links will be localized from the translation file below
 
 export default async function LocalizedHome({ params }: Params) {
-  const locale = params.locale === 'pt' ? 'pt' : 'en';
+  const { locale: localeParam } = await params;
+  const locale = localeParam === 'pt' ? 'pt' : 'en';
   const filePath = path.join(
     process.cwd(),
     'public',

@@ -15,7 +15,15 @@ type Params = {
 };
 
 // ImageGallery component for handling multiple images with navigation
-function ImageGallery({ images, title }: { images: (string | { src: string; alt?: string })[], title?: string }) {
+function ImageGallery({
+  images,
+  title,
+  peek = false,
+}: {
+  images: (string | { src: string; alt?: string })[];
+  title?: string;
+  peek?: boolean;
+}) {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [hasOverflow, setHasOverflow] = useState(false);
   const hasMultipleImages = images.length > 1;
@@ -34,7 +42,10 @@ function ImageGallery({ images, title }: { images: (string | { src: string; alt?
   
   const scroll = (direction: 'left' | 'right') => {
     if (scrollContainerRef.current) {
-      const scrollAmount = scrollContainerRef.current.clientWidth * 0.8;
+      const firstItem = scrollContainerRef.current.firstElementChild as HTMLElement | null;
+      const scrollAmount = firstItem
+        ? firstItem.offsetWidth + 16
+        : scrollContainerRef.current.clientWidth * 0.8;
       scrollContainerRef.current.scrollBy({
         left: direction === 'left' ? -scrollAmount : scrollAmount,
         behavior: 'smooth'
@@ -75,12 +86,23 @@ function ImageGallery({ images, title }: { images: (string | { src: string; alt?
               : image.alt || `${title || 'Image'} ${index + 1}`;
             
             return (
-              <div key={index} className="flex-shrink-0">
+              <div
+                key={index}
+                className={
+                  peek
+                    ? 'w-[78%] flex-shrink-0 sm:w-[70%] md:w-[68%]'
+                    : 'flex-shrink-0'
+                }
+              >
                 <img
                   src={imageSrc}
                   alt={imageAlt}
-                  className="h-auto rounded-lg max-h-[800px] w-auto"
-                  style={{ maxWidth: 'none' }}
+                  className={
+                    peek
+                      ? 'h-auto w-full rounded-lg'
+                      : 'h-auto max-h-[800px] w-auto rounded-lg'
+                  }
+                  style={peek ? undefined : { maxWidth: 'none' }}
                 />
               </div>
             );
@@ -1434,7 +1456,442 @@ Estas metodologias fornecem insights sobre comportamentos, preferências e ponto
         { id: 'results', title: 'Resultados' }
       ]
     }
-  }
+  },
+  acai: {
+    title: 'Acai : Data + Design',
+    headerImage: '/images/projects/acai/cover.webp',
+    avatarImage: '/images/projects/acai/logo.webp',
+    sections: {
+      en: [
+        { id: 'overview', title: 'Overview' },
+        { id: 'challenge', title: 'The Challenge' },
+        { id: 'problem', title: 'The Problem' },
+        { id: 'discovery', title: 'Discovery and Analysis' },
+        { id: 'takeaway', title: 'Key Takeaways' },
+        { id: 'user-path', title: "Understanding User's path" },
+        { id: 'mvp', title: 'MVP Definition' },
+        { id: 'built-for-tom', title: 'What we built for Tom' },
+      ],
+      pt: [
+        { id: 'overview', title: 'Overview' },
+        { id: 'challenge', title: 'The Challenge' },
+        { id: 'problem', title: 'The Problem' },
+        { id: 'discovery', title: 'Discovery and Analysis' },
+        { id: 'takeaway', title: 'Key Takeaways' },
+        { id: 'user-path', title: "Understanding User's path" },
+        { id: 'mvp', title: 'MVP Definition' },
+        { id: 'built-for-tom', title: 'What we built for Tom' },
+      ],
+    },
+    content: {
+      en: {
+        overview: {
+          title: 'Overview',
+          content: `Most analytics tools weren’t built for designers. Acai changes that surfacing insights that are visual, contextual, and ready to act on. Acai is a data analytics tool built specifically for designers. It pulls in data from tools like Mixpanel, Hotjar, and Google Analytics , and instead of presenting raw numbers, it takes a screenshot of your actual product and gives you insights based on what it sees in that visual.
+
+The goal: give designers the clarity they need to act, without requiring them to become analytics experts.`,
+          images: [
+            '/images/projects/acai/overview-1.webp',
+            '/images/projects/acai/overview-2.webp',
+            '/images/projects/acai/overview-3.webp',
+          ],
+          projectInfo: {
+            tools: [
+              'Figma/Figjam',
+              'Storey Teller',
+              'Google meet',
+              'Google workspace',
+            ],
+            duration: 'Ongoing',
+          },
+        },
+        challenge: {
+          title: 'The Challenge',
+          content: `Every product team has at least one designer. But for a designer’s work to land, it needs to be backed by both qualitative and quantitative data — not just one or the other.
+
+The problem is that most designers don’t have direct access to the numbers. They rely on project managers or data analysts to pull insights, which either slows down the process or means decisions get made without the full picture.
+
+And as the role of the designer expands, expected to contribute to strategy, not just craft, that gap becomes harder to ignore.
+
+With Acai, designers can:`,
+          items: [
+            'Make data-driven decisions independently',
+            'Contribute to product strategy with confidence',
+            'Move faster without waiting on analysts',
+            'Take full ownership of the product experience',
+          ],
+        },
+        discovery: {
+          title: 'Discovery and Analysis',
+          content: `Most designers are designing blind.
+
+Before building anything, we needed to hear directly from the people who would use it. We interviewed designers across levels from junior to staff to understand their current pain points around data, how they work today, and what we might have missed in our initial internal brainstorm.`,
+          flowFindings: {
+            title: 'What mapping the flow uncovered',
+            items: [
+              {
+                title: 'Multiple streams in a project',
+                description:
+                  'If a user has more than one stream, how do they select which one to analyze? A decision that would have been missed without mapping the flow end to end.',
+              },
+              {
+                title: 'Disconnected integrations',
+                description:
+                  'If the connection between a site and a partner breaks, how does the user know? How do they reconnect without losing their work?',
+              },
+              {
+                title: 'AI vs. manual input',
+                description:
+                  'Where Acai generates the insight automatically versus where the designer needs to stay in control of the decision',
+              },
+              {
+                title: 'Empty state',
+                description:
+                  "What a designer sees when there's not enough data yet — a moment that needed its own solution, not just a blank screen",
+              },
+            ],
+          },
+        },
+        takeaway: {
+          title: 'Key Takeaways',
+          keyTakeaways: [
+            {
+              image: '/images/projects/acai/takeaway-1.webp',
+              title: 'Trends & iterations',
+              description:
+                'Designers need to see how changes perform over time, and quickly decide whether to revert or move forward',
+            },
+            {
+              image: '/images/projects/acai/takeaway-2.webp',
+              title: 'Data curated for designers',
+              description:
+                'Not every data point matters to a designer. They need a focused set of metrics relevant to design decisions, not a full analyst dashboard',
+            },
+            {
+              image: '/images/projects/acai/takeaway-3.webp',
+              title: 'Actionable insights',
+              description:
+                "Raw data isn't enough. Designers need interpretation — clear next steps attached to what the numbers are saying",
+            },
+          ],
+        },
+        'user-path': {
+          userPath: {
+            content: `We took one of our designers, Tom, and mapped every step from the moment a user dropped off a flow to the moment Tom could act on that insight. That end-to-end flow became the pressure-test for our MVP — and the clearest picture of what Acai needed to support on day one.`,
+            image: '/images/projects/acai/user-path-flow.webp',
+            pivotalMoment: {
+              icon: '/images/projects/acai/pivotal-icon.webp',
+              title: 'A pivotal moment',
+              content: `Acai was originally designed as a Figma plugin. It wasn't until we mapped the flows in full that we realized a plugin is an extension of an existing product — it lives in someone else's house. For the depth of data, the AI engine, and the insight experience we wanted to give designers, a plugin would have been too constrained. That's when we made the call to build Acai as a standalone product.`,
+            },
+          },
+        },
+        mvp: {
+          mvpDefinition: {
+            subtitle: 'Meet Tom',
+            content: `Tom is a product designer working on a client's online shopping website. Users keep falling off before checkout — they never make it to adding an item to cart — and Tom needs to understand why, fast.
+
+Mapping Tom's end-to-end journey with Acai became the MVP definition: the exact set of actions he needs to go from a drop-off problem to a design decision he can act on.`,
+            image: '/images/projects/acai/mvp-flow.webp',
+            featuresIntro:
+              "Based on Tom's needs, Five things had to exist on day one",
+            features: [
+              {
+                image: '/images/projects/acai/mvp-feature-1.webp',
+                title: 'Pages',
+                description:
+                  'View insights tied to each page of your product',
+              },
+              {
+                image: '/images/projects/acai/mvp-feature-2.webp',
+                title: 'Flows',
+                description:
+                  'Track how users move through your product end to end',
+              },
+              {
+                image: '/images/projects/acai/mvp-feature-3.webp',
+                title: 'Data source',
+                description:
+                  'Set up and manage your workspace independently',
+              },
+              {
+                image: '/images/projects/acai/mvp-feature-4.webp',
+                title: 'AI chatbot',
+                description:
+                  'Ask questions and get contextual design suggestions',
+              },
+              {
+                image: '/images/projects/acai/mvp-feature-5.webp',
+                title: 'Project management',
+                description:
+                  'Organize insights across multiple projects and clients',
+              },
+            ],
+          },
+        },
+        'built-for-tom': {
+          content: `Before jumping into wireframes, we mapped the full vision of Acai — then cut ruthlessly. Blue is what had to exist for Tom to complete his task end to end. Grey is everything else: valuable, but not day one.`,
+          image: '/images/projects/acai/built-for-tom-map.webp',
+          navigationDecisions: {
+            title: 'navigation decisions',
+            content: `We also simplified how Tom moves through the product. Early concepts mixed a main navigation with contextual sub-navigation, which quickly felt cluttered and confusing. We moved to a single main navigation — each page self-contained — so Tom always knows where he is and what he can do next.`,
+          },
+          designIterations: [
+            {
+              image: '/images/projects/acai/built-sidebar-compare.webp',
+              title: 'Sidebar evolution',
+              description:
+                'The old sidebar was flat and easy to outgrow. The new structure adds a clear home, renames Integrations to Data source, supports nested sections like Billing, and surfaces upgrade context next to the account — so Tom can orient, manage plans, and act without digging.',
+            },
+            {
+              image: '/images/projects/acai/built-billing-compare.webp',
+              title: 'Billing & plans',
+              description:
+                'Plans moved from a buried tab into a clearer billing hierarchy. Stronger hierarchy, simpler monthly/annual switching, and an upgrade path that sits next to Tom’s account state make pricing decisions easier to scan and act on.',
+            },
+            {
+              image: '/images/projects/acai/built-old.webp',
+              title: 'Old',
+              description:
+                'The old billing experience stacked main navigation, sub-navigation, and a permanent AI chat panel. Three layers competing for space made the interface feel cluttered, and the chat took screen real estate whether Tom needed it or not.',
+            },
+            {
+              image: '/images/projects/acai/built-new.webp',
+              title: 'New',
+              description:
+                'AI chat collapsed into a floating action button — one click to expand without disrupting the view, with a full-screen option for deeper conversations. Navigation dropped from three layers to two, so Billing stays focused and easier to scan.',
+            },
+            {
+              image: '/images/projects/acai/built-final.webp',
+              title: 'Final',
+              description:
+                'The cleaned plans view: clearer monthly/annual switching, stronger plan cards, and an upgrade path that’s easier to act on without competing navigation layers.',
+            },
+          ],
+          videoWalkthrough: {
+            title: 'Walkthrough',
+            items: [
+              {
+                label: 'Old',
+                src: '/images/projects/acai/videos/old.mp4',
+              },
+              {
+                label: 'New',
+                src: '/images/projects/acai/videos/new.mp4',
+              },
+              {
+                label: 'Final',
+                src: '/images/projects/acai/videos/final.mp4',
+              },
+            ],
+          },
+        },
+      },
+      pt: {
+        overview: {
+          title: 'Overview',
+          content: `A maioria das ferramentas de analytics não foi feita para designers. O Acai muda isso, revelando insights visuais, contextuais e prontos para ação. O Acai é uma ferramenta de analytics pensada especificamente para designers. Liga dados de ferramentas como Mixpanel, Hotjar e Google Analytics e, em vez de mostrar números crus, captura um screenshot do teu produto e dá insights com base no que vê nesse visual.
+
+O objetivo: dar aos designers a clareza necessária para agir, sem os obrigar a tornar-se especialistas em analytics.`,
+          images: [
+            '/images/projects/acai/overview-1.webp',
+            '/images/projects/acai/overview-2.webp',
+            '/images/projects/acai/overview-3.webp',
+          ],
+          projectInfo: {
+            tools: [
+              'Figma/Figjam',
+              'Storey Teller',
+              'Google meet',
+              'Google workspace',
+            ],
+            duration: 'Ongoing',
+          },
+        },
+        challenge: {
+          title: 'The Challenge',
+          content: `Todas as equipas de produto têm pelo menos um designer. Mas para o trabalho do designer ter impacto, precisa de ser apoiado por dados qualitativos e quantitativos — não só por um ou pelo outro.
+
+O problema é que a maioria dos designers não tem acesso direto aos números. Dependem de project managers ou analistas de dados para extrair insights, o que atrasa o processo ou leva a decisões sem a visão completa.
+
+E à medida que o papel do designer se expande — esperado contribuir para a estratégia, e não só para o craft — essa lacuna torna-se mais difícil de ignorar.
+
+Com o Acai, os designers podem:`,
+          items: [
+            'Tomar decisões baseadas em dados de forma independente',
+            'Contribuir para a estratégia de produto com confiança',
+            'Avançar mais depressa sem esperar por analistas',
+            'Assumir a totalidade da experiência do produto',
+          ],
+        },
+        discovery: {
+          title: 'Discovery and Analysis',
+          content: `A maioria dos designers está a desenhar às cegas.
+
+Antes de construir qualquer coisa, precisávamos ouvir diretamente as pessoas que o usariam. Entrevistámos designers de vários níveis — de junior a staff — para perceber as suas dores atuais em torno dos dados, como trabalham hoje, e o que poderíamos ter falhado no brainstorming interno inicial.`,
+          flowFindings: {
+            title: 'What mapping the flow uncovered',
+            items: [
+              {
+                title: 'Multiple streams in a project',
+                description:
+                  'Se um utilizador tem mais do que um stream, como escolhe qual analisar? Uma decisão que teria passado despercebida sem mapear o fluxo de ponta a ponta.',
+              },
+              {
+                title: 'Disconnected integrations',
+                description:
+                  'Se a ligação entre um site e um parceiro falha, como é que o utilizador sabe? Como volta a ligar sem perder o trabalho?',
+              },
+              {
+                title: 'AI vs. manual input',
+                description:
+                  'Onde o Acai gera o insight automaticamente versus onde o designer precisa de manter o controlo da decisão',
+              },
+              {
+                title: 'Empty state',
+                description:
+                  'O que um designer vê quando ainda não há dados suficientes — um momento que precisava da sua própria solução, e não só de um ecrã em branco',
+              },
+            ],
+          },
+        },
+        takeaway: {
+          title: 'Key Takeaways',
+          keyTakeaways: [
+            {
+              image: '/images/projects/acai/takeaway-1.webp',
+              title: 'Trends & iterations',
+              description:
+                'Os designers precisam de ver como as mudanças performam ao longo do tempo, e decidir rapidamente se revertem ou avançam',
+            },
+            {
+              image: '/images/projects/acai/takeaway-2.webp',
+              title: 'Data curated for designers',
+              description:
+                'Nem todos os dados importam para um designer. Precisam de um conjunto focado de métricas relevantes para decisões de design, não de um dashboard completo de analista',
+            },
+            {
+              image: '/images/projects/acai/takeaway-3.webp',
+              title: 'Actionable insights',
+              description:
+                'Dados crus não chegam. Os designers precisam de interpretação — próximos passos claros ligados ao que os números estão a dizer',
+            },
+          ],
+        },
+        'user-path': {
+          userPath: {
+            content: `Pegámos num dos nossos designers, o Tom, e mapeámos cada passo — desde o momento em que um utilizador abandona um fluxo até ao momento em que o Tom consegue agir sobre esse insight. Esse fluxo de ponta a ponta tornou-se o teste de stress do nosso MVP — e a visão mais clara do que o Acai precisava de suportar no dia um.`,
+            image: '/images/projects/acai/user-path-flow.webp',
+            pivotalMoment: {
+              icon: '/images/projects/acai/pivotal-icon.webp',
+              title: 'A pivotal moment',
+              content: `O Acai foi originalmente desenhado como um plugin do Figma. Só quando mapeámos os fluxos por completo é que percebemos que um plugin é uma extensão de um produto existente — vive na casa de outra pessoa. Para a profundidade de dados, o motor de IA e a experiência de insights que queríamos dar aos designers, um plugin teria sido demasiado limitado. Foi aí que decidimos construir o Acai como um produto autónomo.`,
+            },
+          },
+        },
+        mvp: {
+          mvpDefinition: {
+            subtitle: 'Meet Tom',
+            content: `O Tom é um product designer a trabalhar no site de compras online de um cliente. Os utilizadores abandonam antes do checkout — nunca chegam a adicionar um item ao carrinho — e o Tom precisa de perceber porquê, depressa.
+
+Mapear a jornada de ponta a ponta do Tom com o Acai tornou-se a definição do MVP: o conjunto exacto de ações de que ele precisa para ir de um problema de drop-off a uma decisão de design sobre a qual possa agir.`,
+            image: '/images/projects/acai/mvp-flow.webp',
+            featuresIntro:
+              'Com base nas necessidades do Tom, cinco coisas tinham de existir no dia um',
+            features: [
+              {
+                image: '/images/projects/acai/mvp-feature-1.webp',
+                title: 'Pages',
+                description:
+                  'Ver insights ligados a cada página do teu produto',
+              },
+              {
+                image: '/images/projects/acai/mvp-feature-2.webp',
+                title: 'Flows',
+                description:
+                  'Acompanhar como os utilizadores se movem pelo teu produto de ponta a ponta',
+              },
+              {
+                image: '/images/projects/acai/mvp-feature-3.webp',
+                title: 'Data source',
+                description:
+                  'Configurar e gerir o teu workspace de forma independente',
+              },
+              {
+                image: '/images/projects/acai/mvp-feature-4.webp',
+                title: 'AI chatbot',
+                description:
+                  'Fazer perguntas e obter sugestões de design contextuais',
+              },
+              {
+                image: '/images/projects/acai/mvp-feature-5.webp',
+                title: 'Project management',
+                description:
+                  'Organizar insights em vários projetos e clientes',
+              },
+            ],
+          },
+        },
+        'built-for-tom': {
+          content: `Antes de saltar para os wireframes, mapeámos a visão completa do Acai — e depois cortámos sem piedade. Azul é o que tinha de existir para o Tom completar a tarefa de ponta a ponta. Cinza é tudo o resto: valioso, mas não para o dia um.`,
+          image: '/images/projects/acai/built-for-tom-map.webp',
+          navigationDecisions: {
+            title: 'navigation decisions',
+            content: `Também simplificámos a forma como o Tom se move no produto. Os conceitos iniciais misturavam uma navegação principal com sub-navegação contextual, o que depressa pareceu sobrecarregado e confuso. Passámos para uma única navegação principal — cada página autónomo — para que o Tom saiba sempre onde está e o que pode fazer a seguir.`,
+          },
+          designIterations: [
+            {
+              image: '/images/projects/acai/built-sidebar-compare.webp',
+              title: 'Sidebar evolution',
+              description:
+                'A sidebar antiga era plana e fácil de ficar pequena demais. A nova estrutura acrescenta um home claro, renomeia Integrations para Data source, permite secções aninhadas como Billing, e mostra o contexto de upgrade junto da conta — para o Tom se orientar, gerir planos e agir sem procurar.',
+            },
+            {
+              image: '/images/projects/acai/built-billing-compare.webp',
+              title: 'Billing & plans',
+              description:
+                'Os planos passaram de um separador escondido para uma hierarquia de billing mais clara. Melhor hierarquia, troca mensal/anual mais simples, e um caminho de upgrade junto do estado da conta tornam as decisões de preço mais fáceis de ler e agir.',
+            },
+            {
+              image: '/images/projects/acai/built-old.webp',
+              title: 'Old',
+              description:
+                'A experiência antiga de billing empilhava navegação principal, sub-navegação e um painel permanente de AI chat. Três camadas a competir por espaço tornavam a interface confusa, e o chat ocupava ecrã mesmo quando o Tom não precisava dele.',
+            },
+            {
+              image: '/images/projects/acai/built-new.webp',
+              title: 'New',
+              description:
+                'O AI chat passou para um floating action button — um clique para expandir sem atrapalhar a vista, com opção de ecrã inteiro para conversas mais profundas. A navegação desceu de três camadas para duas, para o Billing ficar focado e mais fácil de ler.',
+            },
+            {
+              image: '/images/projects/acai/built-final.webp',
+              title: 'Final',
+              description:
+                'A vista de planos limpa: troca mensal/anual mais clara, cards de plano mais fortes, e um caminho de upgrade mais fácil de agir sem camadas de navegação a competir.',
+            },
+          ],
+          videoWalkthrough: {
+            title: 'Walkthrough',
+            items: [
+              {
+                label: 'Old',
+                src: '/images/projects/acai/videos/old.mp4',
+              },
+              {
+                label: 'New',
+                src: '/images/projects/acai/videos/new.mp4',
+              },
+              {
+                label: 'Final',
+                src: '/images/projects/acai/videos/final.mp4',
+              },
+            ],
+          },
+        },
+      },
+    },
+  },
 };
 
 // Image Carousel Component
@@ -1621,11 +2078,302 @@ export default function ProjectPage({ params }: Params) {
                          </ul>
                        </div>
                      )}
+                     {sectionContent?.keyTakeaways && (
+                       <div className="pt-6 md:pt-8 space-y-8 md:space-y-10">
+                         {sectionContent.keyTakeaways.map(
+                           (
+                             item: {
+                               image: string;
+                               title: string;
+                               description: string;
+                             },
+                             idx: number,
+                           ) => (
+                             <div
+                               key={idx}
+                               className="flex items-start gap-4 md:gap-6"
+                             >
+                               <div className="relative h-12 w-16 shrink-0 md:h-14 md:w-20">
+                                 <Image
+                                   src={item.image}
+                                   alt={item.title}
+                                   fill
+                                   sizes="80px"
+                                   className="object-contain object-left"
+                                 />
+                               </div>
+                               <div className="min-w-0 pt-1">
+                                 <h3 className="text-sm font-medium text-foreground md:text-base">
+                                   {item.title}
+                                 </h3>
+                                 <p className="mt-1 text-xs leading-[180%] text-brand-shadow md:text-base md:leading-[200%]">
+                                   {item.description}
+                                 </p>
+                               </div>
+                             </div>
+                           ),
+                         )}
+                       </div>
+                     )}
+                     {sectionContent?.userPath && (
+                       <div className={sectionContent.content ? 'pt-10 md:pt-14' : undefined}>
+                         {sectionContent.userPath.title && (
+                           <h3 className="mb-4 text-base font-medium text-foreground md:text-2xl">
+                             {sectionContent.userPath.title}
+                           </h3>
+                         )}
+                         <p className="text-xs leading-[200%] text-brand-shadow md:text-base whitespace-pre-line">
+                           {sectionContent.userPath.content}
+                         </p>
+                         {sectionContent.userPath.image && (
+                           <div className="mt-6 overflow-hidden rounded-xl border border-brand-grey md:mt-8">
+                             <Image
+                               src={sectionContent.userPath.image}
+                               alt={
+                                 sectionContent.userPath.title ||
+                                 section.title
+                               }
+                               width={1200}
+                               height={500}
+                               className="h-auto w-full"
+                             />
+                           </div>
+                         )}
+                         {sectionContent.userPath.pivotalMoment && (
+                           <div className="mt-6 rounded-xl bg-[#EAF7EC] px-4 py-5 md:mt-8 md:px-6 md:py-6">
+                             <div className="flex items-start gap-3">
+                               {sectionContent.userPath.pivotalMoment.icon && (
+                                 <Image
+                                   src={sectionContent.userPath.pivotalMoment.icon}
+                                   alt=""
+                                   width={36}
+                                   height={36}
+                                   className="mt-0.5 h-8 w-8 shrink-0 md:h-9 md:w-9"
+                                 />
+                               )}
+                               <div className="min-w-0">
+                                 <h4 className="text-sm font-semibold text-[#111111] md:text-base">
+                                   {sectionContent.userPath.pivotalMoment.title}
+                                 </h4>
+                                 <p className="mt-2 text-xs leading-[180%] text-[#333333] md:text-sm md:leading-[200%]">
+                                   {sectionContent.userPath.pivotalMoment.content}
+                                 </p>
+                               </div>
+                             </div>
+                           </div>
+                         )}
+                       </div>
+                     )}
+                     {sectionContent?.flowFindings && (
+                       <div className="pt-10 md:pt-14">
+                         <h3 className="mb-6 text-base font-medium text-foreground md:mb-8 md:text-2xl">
+                           {sectionContent.flowFindings.title}
+                         </h3>
+                         <div className="space-y-6 md:space-y-8">
+                           {sectionContent.flowFindings.items.map(
+                             (
+                               item: { title: string; description: string },
+                               idx: number,
+                             ) => (
+                               <div key={idx} className="flex items-start gap-3 md:gap-4">
+                                 <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-foreground md:mt-1 md:h-6 md:w-6">
+                                   <svg
+                                     className="h-3 w-3 text-background md:h-3.5 md:w-3.5"
+                                     viewBox="0 0 20 20"
+                                     fill="currentColor"
+                                     aria-hidden
+                                   >
+                                     <path
+                                       fillRule="evenodd"
+                                       d="M16.707 5.293a1 1 0 010 1.414l-7.25 7.25a1 1 0 01-1.414 0l-3.25-3.25a1 1 0 011.414-1.414L8.75 11.836l6.543-6.543a1 1 0 011.414 0z"
+                                       clipRule="evenodd"
+                                     />
+                                   </svg>
+                                 </span>
+                                 <div className="min-w-0">
+                                   <h4 className="text-sm font-semibold text-foreground md:text-base">
+                                     {item.title}
+                                   </h4>
+                                   <p className="mt-1 text-xs leading-[180%] text-brand-shadow md:text-base md:leading-[200%]">
+                                     {item.description}
+                                   </p>
+                                 </div>
+                               </div>
+                             ),
+                           )}
+                         </div>
+                       </div>
+                     )}
+                     {sectionContent?.mvpDefinition && (
+                       <div className={sectionContent.content ? 'pt-10 md:pt-14' : undefined}>
+                         {sectionContent.mvpDefinition.title && (
+                           <h3 className="mb-3 text-base font-medium text-foreground md:text-2xl">
+                             {sectionContent.mvpDefinition.title}
+                           </h3>
+                         )}
+                         {sectionContent.mvpDefinition.subtitle && (
+                           <h4 className="mb-3 text-sm font-semibold text-foreground md:text-lg">
+                             {sectionContent.mvpDefinition.subtitle}
+                           </h4>
+                         )}
+                         <p className="text-xs leading-[200%] text-brand-shadow whitespace-pre-line md:text-base">
+                           {sectionContent.mvpDefinition.content}
+                         </p>
+                         {sectionContent.mvpDefinition.image && (
+                           <div className="mt-6 overflow-x-auto rounded-xl border border-brand-grey md:mt-8">
+                             <Image
+                               src={sectionContent.mvpDefinition.image}
+                               alt={
+                                 sectionContent.mvpDefinition.title ||
+                                 section.title
+                               }
+                               width={1400}
+                               height={360}
+                               className="h-auto min-w-[720px] w-full max-w-none"
+                             />
+                           </div>
+                         )}
+                         {sectionContent.mvpDefinition.featuresIntro && (
+                           <h4 className="mt-10 mb-6 text-sm font-semibold text-foreground md:mt-12 md:mb-8 md:text-lg">
+                             {sectionContent.mvpDefinition.featuresIntro}
+                           </h4>
+                         )}
+                         {sectionContent.mvpDefinition.features && (
+                           <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-5 md:gap-4">
+                             {sectionContent.mvpDefinition.features.map(
+                               (
+                                 feature: {
+                                   image: string;
+                                   title: string;
+                                   description: string;
+                                 },
+                                 idx: number,
+                               ) => (
+                                 <div
+                                   key={idx}
+                                   className="flex flex-col items-center text-center"
+                                 >
+                                   <div className="relative mb-3 h-10 w-10 md:h-12 md:w-12">
+                                     <Image
+                                       src={feature.image}
+                                       alt={feature.title}
+                                       fill
+                                       sizes="48px"
+                                       className="rounded-lg object-contain"
+                                     />
+                                   </div>
+                                   <h5 className="text-xs font-semibold text-foreground md:text-sm">
+                                     {feature.title}
+                                   </h5>
+                                   <p className="mt-1 text-[10px] leading-[160%] text-brand-shadow md:text-xs md:leading-[180%]">
+                                     {feature.description}
+                                   </p>
+                                 </div>
+                               ),
+                             )}
+                           </div>
+                         )}
+                       </div>
+                     )}
                      {(sectionContent?.image || sectionContent?.images) && (
                        <ImageGallery 
                          images={sectionContent.images || [sectionContent.image]} 
                          title={sectionContent.title}
+                         peek={
+                           resolvedParams.slug === 'acai' &&
+                           section.id === 'overview'
+                         }
                        />
+                     )}
+                     {sectionContent?.navigationDecisions && (
+                       <div className="pt-8 md:pt-10">
+                         <h3 className="mb-3 text-sm font-semibold text-foreground md:text-lg">
+                           {sectionContent.navigationDecisions.title}
+                         </h3>
+                         <p className="text-xs leading-[200%] text-brand-shadow md:text-base whitespace-pre-line">
+                           {sectionContent.navigationDecisions.content}
+                         </p>
+                       </div>
+                     )}
+                     {sectionContent?.designIterations && (
+                       <div className="space-y-10 pt-8 md:space-y-12 md:pt-10">
+                         {sectionContent.designIterations.map(
+                           (
+                             item: {
+                               image: string;
+                               title: string;
+                               description: string;
+                             },
+                             idx: number,
+                           ) => (
+                             <div key={idx}>
+                               <h3 className="mb-2 text-sm font-semibold text-foreground md:text-lg">
+                                 {item.title}
+                               </h3>
+                               <p className="mb-4 text-xs leading-[200%] text-brand-shadow md:mb-6 md:text-base">
+                                 {item.description}
+                               </p>
+                               <div className="overflow-hidden rounded-xl border border-brand-grey">
+                                 <Image
+                                   src={item.image}
+                                   alt={item.title}
+                                   width={1200}
+                                   height={800}
+                                   className="h-auto w-full"
+                                 />
+                               </div>
+                             </div>
+                           ),
+                         )}
+                       </div>
+                     )}
+                     {sectionContent?.videoWalkthrough && (
+                       <div className="pt-10 md:pt-14">
+                         <h3 className="mb-6 text-base font-medium text-foreground md:mb-8 md:text-2xl">
+                           {sectionContent.videoWalkthrough.title}
+                         </h3>
+                         <div className="grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-4">
+                           {sectionContent.videoWalkthrough.items.map(
+                             (
+                               item: { label: string; src: string },
+                               idx: number,
+                             ) => {
+                               const isVideo = /\.(mp4|webm|mov)(\?|$)/i.test(
+                                 item.src,
+                               );
+                               return (
+                               <div key={idx} className="min-w-0">
+                                 <p className="mb-2 text-sm font-semibold text-foreground">
+                                   {item.label}
+                                 </p>
+                                 <div className="overflow-hidden rounded-xl border border-brand-grey bg-black/5">
+                                   {isVideo ? (
+                                     <video
+                                       src={item.src}
+                                       controls
+                                       playsInline
+                                       preload="metadata"
+                                       className="h-auto w-full"
+                                       aria-label={`${item.label} walkthrough`}
+                                     >
+                                       Your browser does not support the video tag.
+                                     </video>
+                                   ) : (
+                                     <Image
+                                       src={item.src}
+                                       alt={`${item.label} walkthrough`}
+                                       width={1024}
+                                       height={740}
+                                       className="h-auto w-full"
+                                     />
+                                   )}
+                                 </div>
+                               </div>
+                               );
+                             },
+                           )}
+                         </div>
+                       </div>
                      )}
                      {sectionContent?.colorPalette && (
                        <div className="pt-8 md:pt-[42px]">

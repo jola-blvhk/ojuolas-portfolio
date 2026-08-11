@@ -17,22 +17,70 @@
   "skills": {
     "title": "Skills",
     "items": [
-      { "name": "Figma", "icon": "/images/skills/devicon_figma.svg" },
-      { "name": "Spline", "icon": "/images/skills/spline.svg" },
-      { "name": "Blender", "icon": "/images/skills/vscode-icons_file-type-blender.svg" },
-      { "name": "Adobe XD", "icon": "/images/skills/devicon_xd.svg" },
-      { "name": "Adobe PS", "icon": "/images/skills/devicon_photoshop.svg" },
-      { "name": "Adobe AI", "icon": "/images/skills/adobe-ai.svg" },
-      { "name": "Adobe ID", "icon": "/images/skills/logos_adobe-indesign.svg" },
-      { "name": "Framer", "icon": "/images/skills/framer.svg" },
-      { "name": "Webflow", "icon": "/images/skills/webflow.svg" },
-      { "name": "3d illustration", "icon": null },
-      { "name": "User research and testing", "icon": null },
-      { "name": "Animation", "icon": null },
-      { "name": "Design Thinking & Problem-Solving", "icon": null },
-      { "name": "Motion Design", "icon": null },
-      { "name": "Interaction Design", "icon": null },
-      { "name": "Wireframing & Prototyping", "icon": null }
+      {
+        "name": "Figma",
+        "icon": "/images/skills/devicon_figma.svg"
+      },
+      {
+        "name": "Spline",
+        "icon": "/images/skills/spline.svg"
+      },
+      {
+        "name": "Blender",
+        "icon": "/images/skills/vscode-icons_file-type-blender.svg"
+      },
+      {
+        "name": "Adobe XD",
+        "icon": "/images/skills/devicon_xd.svg"
+      },
+      {
+        "name": "Adobe PS",
+        "icon": "/images/skills/devicon_photoshop.svg"
+      },
+      {
+        "name": "Adobe AI",
+        "icon": "/images/skills/adobe-ai.svg"
+      },
+      {
+        "name": "Adobe ID",
+        "icon": "/images/skills/logos_adobe-indesign.svg"
+      },
+      {
+        "name": "Framer",
+        "icon": "/images/skills/framer.svg"
+      },
+      {
+        "name": "Webflow",
+        "icon": "/images/skills/webflow.svg"
+      },
+      {
+        "name": "3d illustration",
+        "icon": null
+      },
+      {
+        "name": "User research and testing",
+        "icon": null
+      },
+      {
+        "name": "Animation",
+        "icon": null
+      },
+      {
+        "name": "Design Thinking & Problem-Solving",
+        "icon": null
+      },
+      {
+        "name": "Motion Design",
+        "icon": null
+      },
+      {
+        "name": "Interaction Design",
+        "icon": null
+      },
+      {
+        "name": "Wireframing & Prototyping",
+        "icon": null
+      }
     ]
   },
   "certifications": {
@@ -67,6 +115,12 @@
     ]
   },
   "projects": [
+    {
+      "title": "Acai",
+      "description": "Give designers the clarity they need to act, without requiring them to become analytics experts.",
+      "image": "/images/projects/acai.webp",
+      "slug": "acai"
+    },
     {
       "title": "Ark Software",
       "description": "Reimagining architecture software with a modern UI, AI and real‑time collaboration.",

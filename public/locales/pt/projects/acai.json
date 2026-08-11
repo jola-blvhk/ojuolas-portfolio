@@ -1,0 +1,70 @@
+{
+  "slug": "acai",
+  "title": "Acai : Data + Design",
+  "cardTitle": "Acai",
+  "cardDescription": "Dar aos designers a clareza necessária para agir, sem os obrigar a tornar-se especialistas em analytics.",
+  "cover": "/images/projects/acai/cover.webp",
+  "logo": "/images/projects/acai/logo.webp",
+  "cardImage": "/images/projects/acai.webp",
+  "nav": [
+    { "id": "overview", "label": "Overview" },
+    { "id": "challenge", "label": "The Challenge" },
+    { "id": "problem", "label": "The Problem" },
+    { "id": "discovery", "label": "Discovery and Research" },
+    { "id": "kickoff", "label": "Design Kickoff and General Planning" },
+    { "id": "guidelines", "label": "Design Guidelines" },
+    { "id": "screens", "label": "Screens" },
+    { "id": "takeaway", "label": "Take Away" },
+    { "id": "testimony", "label": "Testimony" }
+  ],
+  "meta": {
+    "toolsLabel": "Tools",
+    "tools": [
+      "Figma/Figjam",
+      "Storey Teller",
+      "Google meet",
+      "Google workspace"
+    ],
+    "durationLabel": "Duration",
+    "duration": "Ongoing"
+  },
+  "overview": {
+    "paragraphs": [
+      "A maioria das ferramentas de analytics não foi feita para designers. O Acai muda isso, revelando insights visuais, contextuais e prontos para ação. O Acai é uma ferramenta de analytics pensada especificamente para designers. Liga dados de ferramentas como Mixpanel, Hotjar e Google Analytics e, em vez de mostrar números crus, captura um screenshot do teu produto e dá insights com base no que vê nesse visual.",
+      "O objetivo: dar aos designers a clareza necessária para agir, sem os obrigar a tornar-se especialistas em analytics."
+    ],
+    "images": [
+      "/images/projects/acai/overview-1.webp",
+      "/images/projects/acai/overview-2.webp",
+      "/images/projects/acai/overview-3.webp"
+    ]
+  },
+  "sections": {
+    "challenge": {
+      "paragraphs": [
+        "Todas as equipas de produto têm pelo menos um designer. Mas para o trabalho do designer ter impacto, precisa de ser apoiado por dados qualitativos e quantitativos — não só por um ou pelo outro.",
+        "O problema é que a maioria dos designers não tem acesso direto aos números. Dependem de project managers ou analistas de dados para extrair insights, o que atrasa o processo ou leva a decisões sem a visão completa.",
+        "E à medida que o papel do designer se expande — esperado contribuir para a estratégia, e não só para o craft — essa lacuna torna-se mais difícil de ignorar.",
+        "Com o Acai, os designers podem:"
+      ],
+      "bullets": [
+        "Tomar decisões baseadas em dados de forma independente",
+        "Contribuir para a estratégia de produto com confiança",
+        "Avançar mais depressa sem esperar por analistas",
+        "Assumir a totalidade da experiência do produto"
+      ]
+    },
+    "problem": { "pending": true },
+    "discovery": {
+      "paragraphs": [
+        "A maioria dos designers está a desenhar às cegas.",
+        "Antes de construir qualquer coisa, precisávamos ouvir diretamente as pessoas que o usariam. Entrevistámos designers de vários níveis — de junior a staff — para perceber as suas dores atuais em torno dos dados, como trabalham hoje, e o que poderíamos ter falhado no brainstorming interno inicial."
+      ]
+    },
+    "kickoff": { "pending": true },
+    "guidelines": { "pending": true },
+    "screens": { "pending": true },
+    "takeaway": { "pending": true },
+    "testimony": { "pending": true }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "slug": "acai",
+  "title": "Acai : Data + Design",
+  "cardTitle": "Acai",
+  "cardDescription": "Give designers the clarity they need to act, without requiring them to become analytics experts.",
+  "cover": "/images/projects/acai/cover.webp",
+  "logo": "/images/projects/acai/logo.webp",
+  "cardImage": "/images/projects/acai.webp",
+  "nav": [
+    { "id": "overview", "label": "Overview" },
+    { "id": "challenge", "label": "The Challenge" },
+    { "id": "problem", "label": "The Problem" },
+    { "id": "discovery", "label": "Discovery and Research" },
+    { "id": "kickoff", "label": "Design Kickoff and General Planning" },
+    { "id": "guidelines", "label": "Design Guidelines" },
+    { "id": "screens", "label": "Screens" },
+    { "id": "takeaway", "label": "Take Away" },
+    { "id": "testimony", "label": "Testimony" }
+  ],
+  "meta": {
+    "toolsLabel": "Tools",
+    "tools": [
+      "Figma/Figjam",
+      "Storey Teller",
+      "Google meet",
+      "Google workspace"
+    ],
+    "durationLabel": "Duration",
+    "duration": "Ongoing"
+  },
+  "overview": {
+    "paragraphs": [
+      "Most analytics tools weren’t built for designers. Acai changes that surfacing insights that are visual, contextual, and ready to act on. Acai is a data analytics tool built specifically for designers. It pulls in data from tools like Mixpanel, Hotjar, and Google Analytics , and instead of presenting raw numbers, it takes a screenshot of your actual product and gives you insights based on what it sees in that visual.",
+      "The goal: give designers the clarity they need to act, without requiring them to become analytics experts."
+    ],
+    "images": [
+      "/images/projects/acai/overview-1.webp",
+      "/images/projects/acai/overview-2.webp",
+      "/images/projects/acai/overview-3.webp"
+    ]
+  },
+  "sections": {
+    "challenge": {
+      "paragraphs": [
+        "Every product team has at least one designer. But for a designer’s work to land, it needs to be backed by both qualitative and quantitative data — not just one or the other.",
+        "The problem is that most designers don’t have direct access to the numbers. They rely on project managers or data analysts to pull insights, which either slows down the process or means decisions get made without the full picture.",
+        "And as the role of the designer expands, expected to contribute to strategy, not just craft, that gap becomes harder to ignore.",
+        "With Acai, designers can:"
+      ],
+      "bullets": [
+        "Make data-driven decisions independently",
+        "Contribute to product strategy with confidence",
+        "Move faster without waiting on analysts",
+        "Take full ownership of the product experience"
+      ]
+    },
+    "problem": { "pending": true },
+    "discovery": {
+      "paragraphs": [
+        "Most designers are designing blind.",
+        "Before building anything, we needed to hear directly from the people who would use it. We interviewed designers across levels from junior to staff to understand their current pain points around data, how they work today, and what we might have missed in our initial internal brainstorm."
+      ]
+    },
+    "kickoff": { "pending": true },
+    "guidelines": { "pending": true },
+    "screens": { "pending": true },
+    "takeaway": { "pending": true },
+    "testimony": { "pending": true }
+  }
+}
